@@ -1,4 +1,4 @@
-# MERN-boilerplate
+# MERN
 
 This is a boilerplate project using the following technologies:
 - [React](https://facebook.github.io/react/) and [React Router](https://reacttraining.com/react-router/) for the frontend
@@ -7,24 +7,19 @@ This is a boilerplate project using the following technologies:
 - [Webpack](https://webpack.github.io/) for compilation
 
 
-## Requirements
-
-- [Node.js](https://nodejs.org/en/) 6+
-
-```shell
-npm install
-```
-
-
 ## Running
 
-Make sure to add a `config.js` file in the `config` folder. See the example there for more details.
+Make sure to add a `config.js` file in the `config` folder. It has been added to .gitignore
 
 Production mode:
 
 ```shell
 npm start
 ```
+
+Runs on localhost:3500
+
+
 
 Development (Webpack dev server) mode:
 
