@@ -3,8 +3,8 @@ import { Navbar, Button } from 'react-bootstrap';
 import './App.css';
 
 import Wrapper from "./components/Wrapper";
-import Logo    from "./components/Logo";
-import Footer  from "./components/Footer";
+import Logo from "./components/Logo";
+import Footer from "./components/Footer";
 
 
 class App extends Component {
@@ -28,10 +28,10 @@ class App extends Component {
 
         <Logo />
 
-        <div>  
+        <div>
           <Navbar fluid>
             <Navbar.Header>
-              
+
               <Button
                 data-primary={true}
                 className="Button"
@@ -43,7 +43,7 @@ class App extends Component {
                 !isAuthenticated() && (
                   <Button
                     bsStyle="primary"
-                    className="Button"
+                    // className="Button"
                     data-primary={true}
                     className="Button"
                     // className="Button"
@@ -57,7 +57,7 @@ class App extends Component {
                 isAuthenticated() && (
                   <Button
                     bsStyle="primary"
-                    className="btn-margin"
+                    // className="btn-margin"
                     data-primary={true}
                     className="Button"
                     onClick={this.goTo.bind(this, 'profile')}
@@ -70,7 +70,7 @@ class App extends Component {
                 isAuthenticated() && (
                   <Button
                     bsStyle="primary"
-                    className="btn-margin"
+                    // className="btn-margin"
                     data-primary={true}
                     className="Button"
                     onClick={this.logout.bind(this)}
