@@ -1,0 +1,16 @@
+
+.Logo, .App-logo {
+  position: absolute;
+  left: 10px;
+  width: 181px;
+  height: 51px;
+  margin-right: 10px;
+  -webkit-transition: margin .125s ease;
+  transition: margin .125s ease;
+}
+
+.Logo:hover {
+  cursor: pointer;
+  margin-top: 5px;
+}
+
