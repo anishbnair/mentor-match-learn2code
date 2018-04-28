@@ -11,11 +11,21 @@ var DeveloperSchema = new Schema({
     type: String,
     required: true
   },
-  // `link` is required and of type String
-  listName: {
+  // `lastName` is required and of type String
+  lastName: {
     type: String,
     required: true
   },
+
+email:{
+    type:String,
+    require:true
+},
+developerCreated: {
+    type: Date,
+    default: Date.now
+  },
+    
   // `resources` is an object that stores a Resources id
   // The ref property links the ObjectId to the Resources model
   // This allows us to populate the Developer with an associated Resources
