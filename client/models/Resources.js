@@ -5,9 +5,9 @@ var Schema = mongoose.Schema;
 
 // Using the Schema constructor, create a new UserSchema object
 // This is similar to a Sequelize model
-var DeveloperSchema = new Schema({
+var ResourcesSchema = new Schema({
   // `title` is required and of type String
-    firstName: {
+    HTML: {
     type: String,
     required: true
   },

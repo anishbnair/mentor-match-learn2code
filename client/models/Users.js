@@ -5,7 +5,7 @@ var Schema = mongoose.Schema;
 
 // Using the Schema constructor, create a new UserSchema object
 // This is similar to a Sequelize model
-var DeveloperSchema = new Schema({
+var UserSchema = new Schema({
   // `title` is required and of type String
     firstName: {
     type: String,
@@ -21,7 +21,7 @@ email:{
     type:String,
     require:true
 },
-developerCreated: {
+  userCreated: {
     type: Date,
     default: Date.now
   },
