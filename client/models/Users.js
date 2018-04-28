@@ -25,6 +25,14 @@ email:{
     type: Date,
     default: Date.now
   },
+  mentoredUsers:{
+    type:Schema.Types.ObjectId,
+    ref:"Users"
+  },
+  menteeUsers:{
+    type:  Schema.Types.ObjectId,
+    ref:"Users"
+  },
     
   // `resources` is an object that stores a Resources id
   // The ref property links the ObjectId to the Resources model

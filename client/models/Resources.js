@@ -12,13 +12,13 @@ var ResourcesSchema = new Schema({
     required: true
   },
   // `lastName` is required and of type String
-  lastName: {
+  CSS: {
     type: String,
     required: true
   },
 
-email:{
-    type:String,
+jQuery:{
+    type:[],
     require:true
 },
 developerCreated: {
@@ -26,13 +26,7 @@ developerCreated: {
     default: Date.now
   },
     
-  // `resources` is an object that stores a Resources id
-  // The ref property links the ObjectId to the Resources model
-  // This allows us to populate the Developer with an associated Resources
-  resources: {
-    type: Schema.Types.ObjectId,
-    ref: "Resources"
-  }
+
 });
 
 // This creates our model from the above schema, using mongoose's model method
