@@ -21,9 +21,17 @@ email:{
     type:String,
     require:true
 },
-UserrCreated: {
+  userCreated: {
     type: Date,
     default: Date.now
+  },
+  mentoredUsers:{
+    type:Schema.Types.ObjectId,
+    ref:"Users"
+  },
+  menteeUsers:{
+    type:  Schema.Types.ObjectId,
+    ref:"Users"
   },
     
   // `resources` is an object that stores a Resources id
