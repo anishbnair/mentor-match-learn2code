@@ -5,7 +5,7 @@ var Schema = mongoose.Schema;
 
 // Using the Schema constructor, create a new UserSchema object
 // This is similar to a Sequelize model
-var DeveloperSchema = new Schema({
+var UserSchema = new Schema({
   // `title` is required and of type String
     firstName: {
     type: String,
@@ -21,7 +21,7 @@ email:{
     type:String,
     require:true
 },
-developerCreated: {
+UserrCreated: {
     type: Date,
     default: Date.now
   },
@@ -36,7 +36,7 @@ developerCreated: {
 });
 
 // This creates our model from the above schema, using mongoose's model method
-var Developer = mongoose.model("Developer", DeveloperSchema);
+var User = mongoose.model("User", UserSchema);
 
 // Export the Article model
-module.exports = Developer;
+module.exports = User;
