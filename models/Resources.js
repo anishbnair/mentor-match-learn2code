@@ -4,14 +4,14 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 // Using the Schema constructor, create a new UserSchema object
-// This is similar to a Sequelize model
+
 var ResourcesSchema = new Schema({
-  // `title` is required and of type String
-    HTML: {
+ 
+  HTML: {
     type: [String],
     required: true
   },
-  // `lastName` is required and of type String
+  
   CSS: {
     type: [String],
     required: true
@@ -19,18 +19,24 @@ var ResourcesSchema = new Schema({
 
 jQuery:{
     type:[String],
-    require:true
+    required:true
 },
 mongo: {
     type:[String],
-    default: Date.now
+    required:true
+  },
+express:{
+    type:[String],
+    required:true
+  },
+  node_js:{
+    type:[String]
   }
     
-
-});
+  });
 
 // This creates our model from the above schema, using mongoose's model method
-var Resource = mongoose.model("Resources", ResourcesSchema);
+var Resources = mongoose.model("Resources", ResourcesSchema);
 
 // Export the Article model
-module.exports = Resource;
+module.exports = Resources;

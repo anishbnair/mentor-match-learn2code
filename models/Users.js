@@ -25,6 +25,10 @@ password:{
     type:String,
     require
 },
+github:{
+    tyype:String,
+    require
+},
   userCreated: {
     type: Date,
     default: Date.now
