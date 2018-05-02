@@ -21,6 +21,10 @@ email:{
     type:String,
     require:true
 },
+password:{
+    type:String,
+    require
+},
   userCreated: {
     type: Date,
     default: Date.now

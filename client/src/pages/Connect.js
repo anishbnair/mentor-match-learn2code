@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-
+// api.get user
 class Connect extends Component {
   render() {
     return <p>Mentor details from database will be fetched here!!!</p>
+  
   }
 }
 

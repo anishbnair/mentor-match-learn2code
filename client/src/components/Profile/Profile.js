@@ -14,6 +14,8 @@ class Profile extends Component {
             this.setState({ profile: userProfile });
         }
     }
+
+    
     render() {
         const { profile } = this.state;
         return (
