@@ -7,12 +7,12 @@ var Schema = mongoose.Schema;
 
 var ResourcesSchema = new Schema({
  
-  HTML: {
+HTML: {
     type: [String],
     required: true
   },
   
-  CSS: {
+CSS: {
     type: [String],
     required: true
   },
@@ -29,8 +29,9 @@ express:{
     type:[String],
     required:true
   },
-  node_js:{
-    type:[String]
+node_js:{
+    type:[String],
+    required:true
   }
     
   });
