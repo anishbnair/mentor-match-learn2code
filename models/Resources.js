@@ -8,23 +8,23 @@ var Schema = mongoose.Schema;
 var ResourcesSchema = new Schema({
   // `title` is required and of type String
     HTML: {
-    type: String,
+    type: [String],
     required: true
   },
   // `lastName` is required and of type String
   CSS: {
-    type: String,
+    type: [String],
     required: true
   },
 
 jQuery:{
-    type:Array,
+    type:[String],
     require:true
 },
 mongo: {
-    type: Array,
+    type:[String],
     default: Date.now
-  },
+  }
     
 
 });
