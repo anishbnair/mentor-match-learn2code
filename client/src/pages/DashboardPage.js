@@ -18,8 +18,7 @@ class DashboardPage extends Component {
     return (
       <div>
         {/* <Nav title="Mentor Match" /> */}
-
-        <Wrapper>
+       
           <Container>
             <Row>
               <Column size="md-4 sm-3">
@@ -33,7 +32,7 @@ class DashboardPage extends Component {
               </Column>
             </Row>
           </Container>
-        </Wrapper>
+  
         <Footer />
       </div>
     );
