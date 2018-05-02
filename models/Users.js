@@ -44,7 +44,7 @@ email:{
 });
 
 // This creates our model from the above schema, using mongoose's model method
-var User = mongoose.model("User", UserSchema);
+var Users = mongoose.model("Users", UserSchema);
 
 // Export the Article model
-module.exports = User;
+module.exports = Users;
