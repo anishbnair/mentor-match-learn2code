@@ -7,15 +7,11 @@ var Schema = mongoose.Schema;
 // This is similar to a Sequelize model
 var UserSchema = new Schema({
   // `title` is required and of type String
-    firstName: {
+    fullName: {
     type: String,
     required: true
   },
-  // `lastName` is required and of type String
-  lastName: {
-    type: String,
-    required: true
-  },
+ 
 
 email:{
     type:String,
@@ -26,8 +22,16 @@ password:{
     require
 },
 github:{
-    tyype:String,
-    require
+    type:String,
+    require:true
+},
+image:{
+    type:String,
+    required:true
+},
+descript:{
+  type:String,
+  required:true
 },
   userCreated: {
     type: Date,

@@ -16,6 +16,7 @@ const usersSeed = [
     {
       name: "John Doe",
       email: "john.doe@gmail.com",
+      password:"12345",
       github: "https://github.com/johndoe",
       image:
         "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/MarioSMBW.png/220px-MarioSMBW.png",
@@ -31,7 +32,15 @@ const usersSeed = [
       desc: "I am a back-end web developer.",
       skill: "Node.js, Express, MongoDB"
     },
-    
+    {
+      name: "Jane Haux",
+      email: "Jane.H@gmail.com",
+      github: "https://github.com/janehaux",
+      image:
+        "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/MarioSMBW.png/220px-MarioSMBW.png",
+      desc: "Fullstack here and ready to rumble",
+      skill: "HTML, CSS, node_js,express_js"
+    },
 ];
   
 db.Users
