@@ -1,8 +1,29 @@
+.container-profile {
+	position: absolute;
+	margin-top: -95%;
+	margin-left: 70%;
+	width: 25%;
+	height: 60px;
+	{/*border: 4px solid rgba(8,232,222);*/}
+}
+
+h1 {
+	float: right;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
 .profile-area img {
-    max-width: 150px;
-    margin-bottom: 20px;
+	float: right;
+	display: inline-block;
+    right: 10px;
+    max-width: 50px;
+    margin-bottom: 10px;
+    color: white;
   }
   
   .panel-body h3 {
     margin-top: 0;
   }
+
+  
