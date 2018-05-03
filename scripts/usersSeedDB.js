@@ -21,25 +21,33 @@ const usersSeed = [
       image:
         "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/MarioSMBW.png/220px-MarioSMBW.png",
       desc: "I am a front-end web developer who loves to code.",
-      skill: "HTML, CSS, JavaScript"
+      skill: "HTML, CSS, JavaScript",
+      mentoredUsers:"Empty",
+      menteeUsers:"Empty"
     },
   
     {
       name: "Jane Doe",
       email: "jane.doe@gmail.com",
+      password:"12345",
       github: "https://github.com/janedoe",
       image: "https://upload.wikimedia.org/wikipedia/en/f/f1/LuigiNSMBW.png",
       desc: "I am a back-end web developer.",
-      skill: "Node.js, Express, MongoDB"
+      skill: "Node.js, Express, MongoDB",
+      mentoredUsers:"Empty",
+      menteeUsers:"Empty"
     },
     {
       name: "Jane Haux",
       email: "Jane.H@gmail.com",
+      password:"12345",
       github: "https://github.com/janehaux",
       image:
         "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/MarioSMBW.png/220px-MarioSMBW.png",
       desc: "Fullstack here and ready to rumble",
-      skill: "HTML, CSS, node_js,express_js"
+      skill: "HTML, CSS, node_js,express_js",
+      mentoredUsers:"Empty",
+      menteeUsers:"Empty"
     },
 ];
   
