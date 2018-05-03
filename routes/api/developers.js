@@ -1,8 +1,9 @@
 var router = require("express").Router();
-var controllers = require()
+var testcontrollers =require("../controllers/testcontrollers")
 
-router.route("/dashboard")
-  .get()
+
+router.route("/api/dash")
+  .get(testcontrollers.runwithit);
   .post();
 
 
