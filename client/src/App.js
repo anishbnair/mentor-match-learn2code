@@ -35,6 +35,7 @@ class App extends Component {
         <header className="App-header">
           <Logo />
           <div>  
+          
             <Navbar fluid className="App-navbar">
               <Navbar.Header>
                 <Button
