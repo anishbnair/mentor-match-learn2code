@@ -1,9 +1,8 @@
 var router = require("express").Router();
-var testcontrollers =require("../controllers/testcontrollers")
 
 
 router.route("/api/dash")
-  .get(testcontrollers.runwithit);
+  .get();
   .post();
 
 

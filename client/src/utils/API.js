@@ -3,17 +3,14 @@ import axios from "axios";
 
 export default {
 
-running: function(){
-  return axios.get("/api/dash")
-},
 
   createUser:function(){
     return axios.post("/api/dashboard")
   },
 
+
   getUserProfile: function(){
   return axios.get('/api/developer')
-
 
 },
 
