@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Mentor from "../components/Mentor/Mentor.js";
 import sampleMentors from "../components/Mentor/seeds-mentor.js";
+import Footer from "../components/Footer";
 
 class Connect extends Component {
   state = {
@@ -25,6 +26,7 @@ class Connect extends Component {
             ))}
           </ul>
         </div>
+        <Footer />
       </div>
     );
   }

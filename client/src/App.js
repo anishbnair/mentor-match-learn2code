@@ -1,17 +1,16 @@
-import React, { Component } from 'react';
-import { Navbar, Button } from 'react-bootstrap';
-import './App.css';
+import React, { Component } from "react";
+import { Navbar, Button } from "react-bootstrap";
+import "./App.css";
 
 import Wrapper from "./components/Wrapper";
 import Logo from "./components/Logo";
-import Footer from "./components/Footer";
-import Panel from "./components/Panel";
-import MMHeaderCard from "./components/MMHeaderCard";
-import mmheaders from "./mmheaders.json";
+// import Footer from "./components/Footer";
+// import MMHeaderCard from "./components/MMHeaderCard";
+// import mmheaders from "./mmheaders.json";
 
 class App extends Component {
   goTo(route) {
-    this.props.history.replace(`/${route}`)
+    this.props.history.replace(`/${route}`);
   }
 
   login() {
@@ -23,9 +22,9 @@ class App extends Component {
   }
 
   // Setting this.state.mmheaders to the mmheaders json array
-  state = {
-    mmheaders
-  };
+  // state = {
+  //   mmheaders
+  // };
 
   render() {
     const { isAuthenticated } = this.props.auth;
@@ -34,61 +33,85 @@ class App extends Component {
       <Wrapper>
         <header className="App-header">
           <Logo />
-          <div>  
-          
+          <div>
             <Navbar fluid className="App-navbar">
               <Navbar.Header>
                 <Button
                   data-primary={true}
                   className="Button"
-                  onClick={this.goTo.bind(this, 'home')}
+                  onClick={this.goTo.bind(this, "home")}
                 >
                   Home
                 </Button>
-                {
-                  !isAuthenticated() && (
-                    <Button
-                      data-primary={true}
-                      className="Button"
-                      onClick={this.login.bind(this)}
-                    >
-                      Log In
-                      </Button>
-                  )
-                }
-                {
-                  isAuthenticated() && (
-                    <Button
-                      data-primary={true}
-                      className="Button"
-                      onClick={this.goTo.bind(this, 'profile')}
-                    >
-                      Profile
-                      </Button>
-                  )
-                }
-                {
-                  isAuthenticated() && (
-                    <Button
-                      data-primary={true}
-                      className="Button"
-                      onClick={this.logout.bind(this)}
-                    >
-                      Log Out
-                      </Button>
-                  )
-                }
+                {!isAuthenticated() && (
+                  <Button
+                    data-primary={true}
+                    className="Button"
+                    onClick={this.login.bind(this)}
+                  >
+                    Log In
+                  </Button>
+                )}
+                {isAuthenticated() && (
+                  <Button
+                    data-primary={true}
+                    className="Button"
+                    onClick={this.goTo.bind(this, "profile")}
+                  >
+                    Profile
+                  </Button>
+                )}
+                {isAuthenticated() && (
+                  <Button
+                    bsStyle="primary"
+                    // className="btn-margin"
+                    data-primary={true}
+                    className="Button"
+                    onClick={this.goTo.bind(this, "dashboard")}
+                  >
+                    Dashboard
+                  </Button>
+                )}
+                {isAuthenticated() && (
+                  <Button
+                    bsStyle="primary"
+                    // className="btn-margin"
+                    data-primary={true}
+                    className="Button"
+                    onClick={this.goTo.bind(this, "connect")}
+                  >
+                    Connect
+                  </Button>
+                )}
+                {isAuthenticated() && (
+                  <Button
+                    bsStyle="primary"
+                    // className="btn-margin"
+                    data-primary={true}
+                    className="Button"
+                    onClick={this.goTo.bind(this, "resources")}
+                  >
+                    Resources
+                  </Button>
+                )}
+                {isAuthenticated() && (
+                  <Button
+                    data-primary={true}
+                    className="Button"
+                    onClick={this.logout.bind(this)}
+                  >
+                    Log Out
+                  </Button>
+                )}
               </Navbar.Header>
             </Navbar>
-            <div className="container">
-              {this.props.children}
-            </div>
+            <div className="container">{this.props.children}</div>
           </div>
         </header>
 
-        <Panel />
-      
-       {/*{this.state.mmheaders.map(mmheader => (
+        {/* <Panel /> */}
+
+        {/*{this.state.mmheaders.map(mmheader => (
           <MMHeaderCard
             id={mmheader.id}
             key={mmheader.id}
@@ -99,11 +122,10 @@ class App extends Component {
           />
         ))}*/}
 
-        <Footer />
+        {/* <Footer /> */}
       </Wrapper>
     );
   }
 }
 
 export default App;
-

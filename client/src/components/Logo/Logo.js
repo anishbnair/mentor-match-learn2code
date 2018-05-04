@@ -1,5 +1,5 @@
 // imports React and its components and the logo image (logo.png)
-import React, {Component} from 'react';
+import React from 'react';
 import logo  from "../../images/Logo.jpg";
 import logo2 from "../../images/Logo2.png";
 import './Logo.css';
