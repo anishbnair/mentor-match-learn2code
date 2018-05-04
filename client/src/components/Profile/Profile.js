@@ -14,18 +14,6 @@ class Profile extends Component {
     } else {
       this.setState({ profile: userProfile });
     }
-<<<<<<< HEAD
-
-    
-    render() {
-        const { profile } = this.state;
-        return (
-            <div className="container">
-                <div className="profile-area">
-                    <h1>{profile.name}</h1>
-                    <Panel header="Profile">
-                        <img src={profile.picture} alt="profile" />
-=======
   }
   render() {
     const { profile } = this.state;
@@ -36,7 +24,6 @@ class Profile extends Component {
           <Panel header="Profile">
             <img src={profile.picture} alt="profile" />
             {/* 
->>>>>>> bbd6bd33bead6dd678b520a34071c1a79fe9351b
                         <div>
                             <ControlLabel><Glyphicon glyph="user" /> Nickname</ControlLabel>
                             <h3>{profile.nickname}</h3> 

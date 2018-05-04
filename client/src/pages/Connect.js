@@ -1,12 +1,8 @@
 import React, { Component } from "react";
-<<<<<<< HEAD
-// api.get user
-=======
 import Mentor from "../components/Mentor/Mentor.js";
 import sampleMentors from "../components/Mentor/seeds-mentor.js";
 import Footer from "../components/Footer";
 
->>>>>>> bbd6bd33bead6dd678b520a34071c1a79fe9351b
 class Connect extends Component {
   state = {
     mentors: {}

@@ -36,52 +36,11 @@ class App extends Component {
 
     return (
       <Wrapper>
-<<<<<<< HEAD
-        <Logo />
-
-        <div>
-          <Navbar fluid>
-            <Navbar.Header>
-
-              router ="/" login{login}
-              <Button
-                data-primary={true}
-                className="Button"
-                onClick={this.goTo.bind(this, "home")}
-              >
-                Home
-              </Button>
-              {!isAuthenticated() && (
-                <Button
-                  bsStyle="primary"
-                  // className="Button"
-                  data-primary={true}
-                  className="Button"
-                  // className="Button"
-                  onClick={this.login.bind(this)}
-                >
-                  Log In
-                </Button>
-              )}
-              {isAuthenticated() && (
-                <Button
-                  bsStyle="primary"
-                  // className="btn-margin"
-                  data-primary={true}
-                  className="Button"
-                  onClick={this.goTo.bind(this, "dashboard")}
-                >
-                  Dashboard
-                </Button>
-              )}
-              {isAuthenticated() && (
-=======
         <header className="App-header">
           <Logo />
           <div>
             <Navbar fluid className="App-navbar">
               <Navbar.Header>
->>>>>>> bbd6bd33bead6dd678b520a34071c1a79fe9351b
                 <Button
                   data-primary={true}
                   className="Button"
