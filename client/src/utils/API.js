@@ -10,13 +10,13 @@ export default {
 
 
   getUserProfile: function(){
-  return axios.get('/api/developer')
+  return axios.get('/api/dashboard')
 
 },
 
 
 saveResources: function(){
-return axios.put('/api/developer')
+return axios.put('/api/dashboard')
 },
 
 saveUserConnection: function(){

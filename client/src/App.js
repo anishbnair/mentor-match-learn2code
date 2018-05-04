@@ -29,6 +29,8 @@ class App extends Component {
         <div>
           <Navbar fluid>
             <Navbar.Header>
+
+              router ="/" login{login}
               <Button
                 data-primary={true}
                 className="Button"
