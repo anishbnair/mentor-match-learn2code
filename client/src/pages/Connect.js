@@ -8,10 +8,10 @@ class Connect extends Component {
   componentDidMount() {
     this.loadMentors();
   }
-
-  loadMentors = () => {
-    this.setState({ mentors: sampleMentors });
-  };
+  //dummy data
+  // loadMentors = () => {
+  //   this.setState({ mentors: sampleMentors });
+  // };
 
   render() {
     return <p>Mentor details from database will be fetched here!!!</p>

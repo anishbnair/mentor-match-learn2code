@@ -30,7 +30,7 @@ class App extends Component {
           <Navbar fluid>
             <Navbar.Header>
 
-              router ="/" login{login}
+              {/*   router ="/" login{login}*/} 
               <Button
                 data-primary={true}
                 className="Button"
