@@ -6,12 +6,16 @@ class Resources extends React.Component {
     //add state 
     render() {
         return (
-            <div className="card align-items-center">
-                <div className="card-body">
-                    <h5 className="card-title">My Resources</h5>
+            <div>
+                <div className="panel panel-default">
+                    <div className="panel-heading">
+                        <h3 className="panel-title">My Resources</h3>
+                    </div>
+                    <div className="panel-body">
+                        Panel content
+                    </div>
                 </div>
             </div>
-
         )
     }
 }
