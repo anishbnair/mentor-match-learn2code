@@ -1,4 +1,4 @@
-.mentor-list {
+/* .mentor-list {
   border-bottom: 2px solid #000;
   border-top: 1px solid #000;
   padding-bottom: 2rem;
@@ -9,7 +9,6 @@
 }
 .mentor-list p {
   margin: 0;
-  /* font-size: 1.8rem; */
   font-size: 1 rem;
 }
 .mentor-list .mentor-name {
@@ -44,4 +43,4 @@
   perspective: 1000px;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-}
+} */
