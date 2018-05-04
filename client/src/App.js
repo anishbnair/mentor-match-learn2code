@@ -26,6 +26,11 @@ class App extends Component {
   //   mmheaders
   // };
 
+  componentDidMount() {
+    // redirect to home page
+    this.props.history.replace("/home");    
+  }
+
   render() {
     const { isAuthenticated } = this.props.auth;
 
