@@ -70,8 +70,10 @@ body {
 .App-navbar {
   margin-top: -4%;
   margin-left: 35%;
-  width: 30%;
+  width: 45%;
   height: 60px;
+  background:  #0b3c5d;
+  border: none;
   {/*border: 2px solid rgba(255,170,29);*/}
 }
 
