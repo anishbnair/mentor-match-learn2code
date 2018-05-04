@@ -1,21 +1,22 @@
 import React from "react";
 import "./DashCards.css";
+import Interests from '../Modal/Modal.js'
 
 class TechPath extends React.Component {
   //add state
   render() {
     return (
-      <div className="card align-items-center">
-        <div className="card-body">
-          <h5 className="card-title">My Technology Path</h5>
-          <br />
-          <br />
-          <button type="button" className="btn btn-primary btn-block">
-            Choose Path
-          </button>
+      <div>
+        <div className="panel panel-default">
+          <div className="panel-heading">
+            <h3 className="panel-title">My Connections</h3>
+          </div>
+          <div className="panel-body">
+            <Interests />
+          </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
