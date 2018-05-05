@@ -4,8 +4,9 @@ var router = require("express").Router();
 var mongoose=require("mongoose");
 
 
-router.route("/")
+router.route("/api/home")
 .post(function(req,res){
+<<<<<<< HEAD
   console.log("These are the results!  " +JSON.parse(res));
   var uri = "mongodb://localhost:27017/mentor-match"
 mongoose.connect(uri, function(error) {
@@ -14,6 +15,10 @@ mongoose.connect(uri, function(error) {
 
 })
 res.json(res)
+=======
+  console.log(res);
+  res.json("results");
+>>>>>>> parent of 0af80e9... connected route
 });
 
 // router.route("/api/dashboard")
