@@ -40,12 +40,12 @@ descript:{
   mentoredUsers:{
     type:Schema.Types.ObjectId,
     ref:"Users",
-    default:"Empty"
+    // default:"Empty"
   },
   menteeUsers:{
     type:  Schema.Types.ObjectId,
     ref:"Users",
-    default:"Empty"
+    // default:"Empty"
   },
 
   // `resources` is an object that stores a Resources id

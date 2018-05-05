@@ -9,14 +9,15 @@ router.route("/")
 .post(function(req,res){
   console.log(req.body.idTokenPayload.nickname);
   res.json("results");
-  uri = "mongodb://localhost/mentor-match"
+  uri = "mongodb://localhost:27017/mentor-match"
   mongoose.connect(uri, (error)=>{
 
-    var Newuser = new Users({ name: req.body.idTokenPayload,
+    var Newuser = new Users({ name: req.body.idTokenPayload.name,
       email:req.body.idTokenPayload.nickname+"@gmail.com",
       picture:req.body.idTokenPayload.picture});
-      Newuser.save((err,Users) =>{
-        console.log(Users);
+      Newuser.save((err) =>{
+        if(err) throw err;
+        console.log(Newuser);
       });
     console.log("database connected");
   })
