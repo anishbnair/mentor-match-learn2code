@@ -27,10 +27,10 @@
   {/*border: 2px solid rgba(255,131,0);*/}
 }
 
-.Logo:hover {
+/* .Logo:hover {
   cursor: pointer;
   margin-top: 5px;
-}
+} */
 
 
 @media (max-width:767px) {
