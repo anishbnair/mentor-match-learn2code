@@ -1,14 +1,9 @@
-<<<<<<< HEAD
+
 import auth0 from 'auth0-js';
 import { AUTH_CONFIG } from './auth0-variables';
 import history from '../../history';
 import axios from "axios";
 
-=======
-import auth0 from "auth0-js";
-import { AUTH_CONFIG } from "./auth0-variables";
-import history from "../../history";
->>>>>>> b33c17f762297775b9372da4f26e3ce0a732f221
 
 export default class Auth {
   auth0 = new auth0.WebAuth({
@@ -48,7 +43,7 @@ export default class Auth {
     });
   }
 
-<<<<<<< HEAD
+
     setSession(authResult) {
         // Set the time that the access token will expire at
         let expiresAt = JSON.stringify(
@@ -69,19 +64,7 @@ export default class Auth {
             console.log(error);
           });
           }
-=======
-  setSession(authResult) {
-    // Set the time that the access token will expire at
-    let expiresAt = JSON.stringify(
-      authResult.expiresIn * 1000 + new Date().getTime()
-    );
-    localStorage.setItem("access_token", authResult.accessToken);
-    localStorage.setItem("id_token", authResult.idToken);
-    localStorage.setItem("expires_at", expiresAt);
-    // navigate to the home route
-    history.replace("/home");
-  }
->>>>>>> b33c17f762297775b9372da4f26e3ce0a732f221
+
 
   getAccessToken() {
     const accessToken = localStorage.getItem("access_token");
@@ -111,19 +94,13 @@ export default class Auth {
     history.replace("/home");
   }
 
-<<<<<<< HEAD
-    isAuthenticated() {
-        // Check whether the current time is past the
-        // access token's expiry time
-        let expiresAt = JSON.parse(localStorage.getItem('expires_at'));
-        return new Date().getTime() < expiresAt;
-    }
-=======
+
+
   isAuthenticated() {
     // Check whether the current time is past the
     // access token's expiry time
     let expiresAt = JSON.parse(localStorage.getItem("expires_at"));
     return new Date().getTime() < expiresAt;
   }
->>>>>>> b33c17f762297775b9372da4f26e3ce0a732f221
+
 }

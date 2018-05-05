@@ -3,9 +3,9 @@ var router = require("express").Router();
 //  var userController = require('../controllers/userController');
 
 
-router.route("/api/home")
+router.route("/")
 .post(function(req,res){
-  console.log(res);
+  console.log("These are the results!  " +res);
   res.json("results");
 });
 
