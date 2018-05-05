@@ -12,7 +12,7 @@ class PrevConnect extends React.Component {
                         <h3 className="panel-title">My Connections</h3>
                     </div>
                     <div className="panel-body">
-                        Panel content
+                     
                     </div>
                 </div>
             </div>
