@@ -48,7 +48,7 @@ export default class Auth {
             authResult.expiresIn * 1000 + new Date().getTime()
         );
 
-
+        console.log(authResult);
         localStorage.setItem('access_token', authResult.accessToken);
         localStorage.setItem('id_token', authResult.idToken);
         localStorage.setItem('expires_at', expiresAt);
