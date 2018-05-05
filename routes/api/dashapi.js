@@ -1,12 +1,14 @@
 var router = require("express").Router();
-// var resourcesController= require('../controllers/resourcesController');
-//  var userController = require('../controllers/userController');
+ var resourcesController= require('../../controllers/resourcesController');
+ var usersController = require('../../controllers/usersController');
+var mongoose=require("mongoose");
 
 
 router.route("/")
 .post(function(req,res){
-  console.log("These are the results!  " +res);
+  console.log(res);
   res.json("results");
+
 });
 
 // router.route("/api/dashboard")
