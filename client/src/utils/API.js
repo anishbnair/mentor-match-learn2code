@@ -4,8 +4,8 @@ import axios from "axios";
 export default {
 
 
-  createUser:function(){
-    return axios.post("/api/dashboard")
+  createUser:function(userinfo){
+    return axios.post("/api/dashboard",userinfo)
   },
 
 
