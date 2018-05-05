@@ -16,6 +16,10 @@ CSS: {
     type: [String],
     required: true
   },
+JavaScipt:{
+    type:[String],
+    required:true
+},
 
 jQuery:{
     type:[String],
@@ -32,7 +36,11 @@ express:{
 node_js:{
     type:[String],
     required:true
-  }
+  },
+react:{
+    type:[String],
+    required:true
+}
     
   });
 
