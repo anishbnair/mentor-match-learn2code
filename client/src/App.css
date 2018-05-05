@@ -51,9 +51,10 @@ table {
 @import "https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900";
 
 body {
-  background: #221f1f;
+  background: #286da8;
   color: #ffffff;
   font-family: "Lato", sans-serif;
+  height: 100%;
   {/*border: 2px solid rgba(102,255,0);*/}
 }
 
