@@ -59,6 +59,11 @@ export default class Auth {
         localStorage.setItem('expires_at', expiresAt);
         // navigate to the home route
         history.replace('/home');
+        //API user info
+
+        const userinfo={
+
+        }
         axios.post('api/home', authResult)
           .then(function (response) {
             console.log(response);
