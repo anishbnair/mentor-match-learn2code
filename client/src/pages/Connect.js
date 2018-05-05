@@ -17,6 +17,10 @@ class Connect extends Component {
   };
 
   render() {
+<<<<<<< HEAD
+    return <p>Mentor details from database will be fetched here!!!</p>
+  
+=======
     return (
       <div className="mentor-connect">
         <div className="mentors">
@@ -29,6 +33,7 @@ class Connect extends Component {
         <Footer />
       </div>
     );
+>>>>>>> bbd6bd33bead6dd678b520a34071c1a79fe9351b
   }
 }
 
