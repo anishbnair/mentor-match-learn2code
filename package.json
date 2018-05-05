@@ -12,22 +12,16 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "installDeps": "yarn && cd client && yarn"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/anishbnair/mentor-match-learn2code.git"
-  },
-  "keywords": [],
-  "author": "Kavodel Lasode <Klasode@gmail.com> (http://www.kavodellasode.com)",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/anishbnair/mentor-match-learn2code/issues"
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.11.0"
   },
-  "homepage": "https://github.com/anishbnair/mentor-match-learn2code#readme",
   "dependencies": {
-    "axios": "^0.18.0",
-    "body-parser": "^1.18.2",
-    "concurrently": "^3.5.1",
-    "express": "^4.16.3",
-    "mongoose": "^5.0.17"
+    "axios": "^0.16.2",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "mongoose": "^5.0.11"
   }
 }
