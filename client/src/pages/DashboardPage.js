@@ -3,7 +3,7 @@ import React, { Component } from "react";
 // import Dashboard from "../pages/Dashboard";
 // import Connect from "../pages/Connect";
 // import Nav from "../components/Nav";
-import Wrapper from "../components/Wrapper";
+// import Wrapper from "../components/Wrapper";
 import Container from "../components/Container";
 import Column from "../components/Column";
 import Row from "../components/Row";
@@ -19,21 +19,20 @@ class DashboardPage extends Component {
       <div>
         {/* <Nav title="Mentor Match" /> */}
 
-        <Wrapper>
-          <Container>
-            <Row>
-              <Column size="md-4 sm-3">
-                <PrevConnect />
-              </Column>
-              <Column size="md-4 sm-3">
-                <TechPath />
-              </Column>
-              <Column size="md-4 sm-3">
-                <Resources />
-              </Column>
-            </Row>
-          </Container>
-        </Wrapper>
+        <Container>
+          <Row>
+            <Column size="md-4 sm-3">
+              <PrevConnect />
+            </Column>
+            <Column size="md-4 sm-3">
+              <TechPath />
+            </Column>
+            <Column size="md-4 sm-3">
+              <Resources />
+            </Column>
+          </Row>
+        </Container>
+
         <Footer />
       </div>
     );

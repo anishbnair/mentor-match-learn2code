@@ -1,12 +1,30 @@
 
-.Logo, .App-logo {
-  position: absolute;
+
+.Logo {
   left: 10px;
+  width: 390px;
+  height: 65px;
+  margin-top: 15px;
+  margin-left: 10px;
+  {/*border: 2px solid rgba(255,131,0);*/}
+}
+
+.App-logo {
+  float: left;
   width: 181px;
-  height: 51px;
-  margin-right: 10px;
+  height: 61px;
   -webkit-transition: margin .125s ease;
   transition: margin .125s ease;
+  {/*}border: 2px solid rgba(255,131,0);*/}
+}
+
+.App-logo2 {
+  float: left;
+  width: 191px;
+  height: 61px;
+  -webkit-transition: margin .125s ease;
+  transition: margin .125s ease;
+  {/*border: 2px solid rgba(255,131,0);*/}
 }
 
 .Logo:hover {
@@ -14,3 +32,15 @@
   margin-top: 5px;
 }
 
+
+@media (max-width:767px) {
+  .Logo {
+    
+  }
+}
+
+@media (max-width:991px) {
+  .Logo {
+    
+  }
+}

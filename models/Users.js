@@ -19,7 +19,7 @@ email:{
 },
 password:{
     type:String,
-    require
+    require:true
 },
 github:{
     type:String,
