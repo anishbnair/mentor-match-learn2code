@@ -11,6 +11,7 @@ import Footer from "../components/Footer";
 import TechPath from "../components/DashCards/TechPath";
 import PrevConnect from "../components/DashCards/PreviousConnections";
 import Resources from "../components/DashCards/MyResources";
+import "./DashboardPage.css";
 // import "./DashCards.css";
 
 class DashboardPage extends Component {
