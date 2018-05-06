@@ -1,0 +1,12 @@
+.panel {
+    width: 23rem;
+    height: 20rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    position: relative;
+}
+
+.panel-body {
+    color: black;
+}
+

@@ -1,0 +1,23 @@
+import React from "react";
+import "./DashCards.css";
+import Interests from '../Modal/Modal.js'
+
+class TechPath extends React.Component {
+  //add state
+  render() {
+    return (
+      <div>
+        <div className="panel panel-default">
+          <div className="panel-heading">
+            <h3 className="panel-title">My Connections</h3>
+          </div>
+          <div className="panel-body">
+            <Interests />
+          </div>
+        </div>
+      </div>
+    )
+  }
+}
+
+export default TechPath;
