@@ -1,4 +1,14 @@
 export const AUTH_CONFIG = {
+  // domain: "mentor-match.auth0.com",
+  // clientId: "srfL4vr5SB0gSsS8yne5OQxJjhWFKMKc",
+  // callbackUrl:
+  //   process.env.AUTH0_CALLBACK_URL || "http://localhost:3000/callback"
+
+  // domain: "mentor-match.auth0.com",
+  // clientId: "srfL4vr5SB0gSsS8yne5OQxJjhWFKMKc",
+  // callbackUrl:
+  //   process.env.AUTH0_CALLBACK_URL || "http://localhost:3000/callback"
+
   domain: "project-3.auth0.com",
   clientId: "a6R3KKabd2LumdWZAafpqffgbUmeQrce",
   callbackUrl: "http://localhost:3000/callback"

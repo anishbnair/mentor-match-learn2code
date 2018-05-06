@@ -11,10 +11,10 @@ class Connect extends Component {
   componentDidMount() {
     this.loadMentors();
   }
-  //dummy data
-  // loadMentors = () => {
-  //   this.setState({ mentors: sampleMentors });
-  // };
+
+  loadMentors = () => {
+    this.setState({ mentors: sampleMentors });
+  };
 
   render() {
     return (
