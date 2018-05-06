@@ -7,11 +7,11 @@ var Schema = mongoose.Schema;
 // This is similar to a Sequelize model
 var UserSchema = new Schema({
   // `title` is required and of type String
-    fullName: {
+    name: {
     type: String,
     required: true
   },
- 
+
 
 email:{
     type:String,
@@ -19,19 +19,19 @@ email:{
 },
 password:{
     type:String,
-    require:true
+    // require:true
 },
 github:{
     type:String,
-    require:true
+    // require:true
 },
-image:{
+picture:{
     type:String,
     required:true
 },
 descript:{
   type:String,
-  required:true
+  // required:true
 },
   userCreated: {
     type: Date,
@@ -40,14 +40,14 @@ descript:{
   mentoredUsers:{
     type:Schema.Types.ObjectId,
     ref:"Users",
-    default:"Empty"
+    // default:"Empty"
   },
   menteeUsers:{
     type:  Schema.Types.ObjectId,
     ref:"Users",
-    default:"Empty"
+    // default:"Empty"
   },
-    
+
   // `resources` is an object that stores a Resources id
   // The ref property links the ObjectId to the Resources model
   // This allows us to populate the Developer with an associated Resources
