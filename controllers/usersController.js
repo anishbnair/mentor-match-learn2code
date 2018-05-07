@@ -1,24 +1,41 @@
 const db = require("../models");
 
-// Defining methods for the UsersController
+// Defining methods for the UserssController
 module.exports = {
   findAll: function(req, res) {
-    db.User
+    db.Users
       .find(req.query)
       .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   findOne: function(req, res) {
-    db.User
-    console.log(req)
-      // .findOne(req.body.email)
-      // .sort({ date: -1 })
-      // .then(dbModel => res.json(dbModel))
-      // .catch(err => res.status(422).json(err));
-  },
+   console.log("findone console:" + JSON.stringify(req.body.email))
+     db.Users
+         .findOne({"email":req.body.email})
+         .sort({ date: -1 })
+         .then(dbModel =>{
+          //testing: 
+          console.log("controller data:" + dbModel)
+          //testing ended:
+        if(dbModel===null){
+         console.log("creating user...." + dbModel)
+         db.Users
+      .create(req.body)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+          res.json("controller side" + dbModel)
+        
+         }   
+         }
+       )
+       .catch(err => res.status(422).json(err));
+      
+  
+},
+
   findById: function(req, res) {
-    db.User
+    db.Users
       .findById(req.body.id)
       // .findById(req.id)
       .then(dbModel => res.json(dbModel))
@@ -31,13 +48,13 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   update: function(req, res) {
-    db.User
+    db.Users
       .findOneAndUpdate({ _id: req.params.id }, req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   remove: function(req, res) {
-    db.User
+    db.Users
       .findById({ _id: req.params.id })
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))
