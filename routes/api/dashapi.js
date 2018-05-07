@@ -4,10 +4,9 @@ var router = require("express").Router();
 var mongoose=require("mongoose");
 var Users = require("../../models/Users")
 
-// router.route("/").get(usersController.findOne).then(
-//   res.json("great")
-// )
-router.route("/").post(usersController.create)
+router.route("/").get(usersController.findOne)
+// router.route("/").get(usersController.findById)
+// router.route("/").post(usersController.create)
 // .post(function(req,res){
 //   console.log(req.body.idTokenPayload.nickname);
 //   res.json("results please");

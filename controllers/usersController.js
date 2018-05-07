@@ -11,14 +11,16 @@ module.exports = {
   },
   findOne: function(req, res) {
     db.User
-      .find(req.query)
-      .sort({ date: -1 })
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+    console.log(req)
+      // .findOne(req.body.email)
+      // .sort({ date: -1 })
+      // .then(dbModel => res.json(dbModel))
+      // .catch(err => res.status(422).json(err));
   },
   findById: function(req, res) {
     db.User
-      .findById(req.params.id)
+      .findById(req.body.id)
+      // .findById(req.id)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

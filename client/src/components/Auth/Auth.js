@@ -70,15 +70,18 @@ export default class Auth {
         history.replace('/home');
         //API user info
 
+        const userEmail={
+          email:userinfo.email,
+          id:'ObjectId("5af07566bd97e8034c6b7169")'
+        }
+        console.log(`user email right here son!: ${userEmail.email}`)
+        
        
-        // axios.post('api/home', authResult)
-        // const userEmail={
-        //   email:userinfo.email
-        // }
-        // axios.get('api/home', userEmail)
-       axios.post('api/home', userinfo)
+       // console.log(`userinfo: ${userEmail.email}`)
+         axios.get('api/home', userEmail)
+      //  axios.post('api/home', userinfo)
           .then(function (response) {
-            console.log(response);
+            console.log(`user has been found: ${response}`);
           })
           .catch(function (error) {
             console.log(error);
