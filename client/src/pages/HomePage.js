@@ -1,36 +1,40 @@
+
 import React, { Component } from "react";
 import Panel from "../components/Panel";
 import Footer from "../components/Footer";
-// import App from "../App";
+import Profile from "../components/Profile/Profile";
+import "./HomePage.css";
 
 class HomePage extends Component {
-  //   state = {
-  //     mentors: {}
-  //   };
 
-  //   componentDidMount() {
-  //     this.loadMentors();
-  //   }
-
-  //   loadMentors = () => {
-  //     this.setState({ mentors: sampleMentors });
-  //   };
+  componentWillMount() {
+    this.setState({ profile: {} });
+    const { userProfile, getProfile } = this.props.auth;
+    console.log(this.props.auth);
+    if (!userProfile) {
+      console.log("no profile....");
+    } else {
+      this.setState({ profile: userProfile });
+      console.log("got profile.....");
+    }
+  }
 
   render() {
+    const { profile } = this.state;
+  
     return (
-      //   <div className="mentor-connect">
-      //     <div className="mentors">
-      //       <ul className="mentor">
-      //         {Object.keys(this.state.mentors).map(key => (
-      //           <Mentor key={key} index={key} details={this.state.mentors[key]} />
-      //         ))}
-      //       </ul>
-      //     </div>
-      //   </div>
       <div>
-        {/* <App /> */}
+
+        <div className="container-profile-home">
+          <h1>{profile.name}</h1>
+          <div className="profile-area-home">
+                <img src={profile.picture} alt="" />
+          </div>
+        </div>
+  
         <Panel />
         <Footer />
+        
       </div>
     );
   }

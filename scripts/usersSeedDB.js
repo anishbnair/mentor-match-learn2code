@@ -50,7 +50,7 @@ const usersSeed = [
       menteeUsers:"Empty"
     },
 ];
-  
+  console.log("seed testing")
 db.Users
 .remove({})
 .then(() => db.Users.collection.insertMany(usersSeed))
