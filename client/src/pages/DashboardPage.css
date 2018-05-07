@@ -1,6 +1,29 @@
-
 .Footer {
-    position: fixed;
-    right: 0;
-    text-align: center;
-  }
+  position: fixed;
+  right: 0;
+  text-align: center;
+}
+
+.container-profile-dash {
+  position: absolute;
+  margin-top: -7%;
+  margin-left: 73%;
+  width: 25%;
+  height: 60px;
+
+}
+
+h1 {
+  float: right;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.profile-area-dash img {
+  float: right;
+  display: inline-block;
+  right: 10px;
+  max-width: 50px;
+  margin-bottom: 10px;
+  color: white;
+}
