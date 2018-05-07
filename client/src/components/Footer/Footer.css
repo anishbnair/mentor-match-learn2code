@@ -22,16 +22,15 @@
   text-align: center;
 }
 
-@media (max-width:767px) {
+@media (max-width: 767px) {
   .Footer {
-    text-align:center;
-    padding-bottom:20px;
+    text-align: center;
+    padding-bottom: 20px;
   }
 }
 
-@media (max-width:991px) {
+@media (max-width: 991px) {
   .Footer {
-    text-align:center;
+    text-align: center;
   }
 }
-
