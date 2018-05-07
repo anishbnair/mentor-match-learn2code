@@ -39,7 +39,7 @@ node_js:{
 }
   }
 ];
-
+console.log("resources seeds checkya")
 db.Resources
   .remove({})
   .then(() => db.Resources.collection.insertMany(resourcesSeed))
