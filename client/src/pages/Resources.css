@@ -1,0 +1,23 @@
+
+.container-profile-resc {
+	position: absolute;
+	margin-top: -7%;
+	margin-left: 73%;
+	width: 25%;
+	height: 60px;
+}
+
+h1 {
+	float: right;
+	margin-left: 10px;
+	margin-top: 20px;
+}
+
+.profile-area-resc img {
+	float: right;
+	display: inline-block;
+    right: 10px;
+    max-width: 50px;
+    margin-bottom: 10px;
+    color: white;
+  }
