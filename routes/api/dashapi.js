@@ -4,25 +4,27 @@ var router = require("express").Router();
 var mongoose=require("mongoose");
 var Users = require("../../models/Users")
 
+// router.route("/").get(usersController.findOne).then(
+//   res.json("great")
+// )
+router.route("/").post(usersController.create)
+// .post(function(req,res){
+//   console.log(req.body.idTokenPayload.nickname);
+//   res.json("results please");
+//   uri = "mongodb://localhost:27017/mentor-match"
+//   mongoose.connect(uri, (error)=>{
 
-router.route("/")
-.post(function(req,res){
-  console.log(req.body.idTokenPayload.nickname);
-  res.json("results");
-  uri = "mongodb://localhost:27017/mentor-match"
-  mongoose.connect(uri, (error)=>{
+//     var Newuser = new Users({ name: req.body.idTokenPayload.name,
+//       email:req.body.idTokenPayload.nickname+"@gmail.com",
+//       picture:req.body.idTokenPayload.picture});
+//       Newuser.save((err) =>{
+//         if(err) throw err;
+//         console.log(Newuser);
+//       });
+//     console.log("database connected");
+//   })
 
-    var Newuser = new Users({ name: req.body.idTokenPayload.name,
-      email:req.body.idTokenPayload.nickname+"@gmail.com",
-      picture:req.body.idTokenPayload.picture});
-      Newuser.save((err) =>{
-        if(err) throw err;
-        console.log(Newuser);
-      });
-    console.log("database connected");
-  })
-
-});
+// });
 
 
 // , function(req,res){

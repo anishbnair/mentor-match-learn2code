@@ -52,8 +52,17 @@ export default class Auth {
         let expiresAt = JSON.stringify(
             authResult.expiresIn * 1000 + new Date().getTime()
         );
+        //testing:
+        console.log("this is user info:" + JSON.stringify(authResult));
+        const userinfo={
+         name: authResult.idTokenPayload.name,
+         email: authResult.idTokenPayload.nickname + "@gmail.com",
+         picture: authResult.idTokenPayload.picture,
+        
+        }
+        //testing:
+        console.log(`this is the user ${userinfo.name} ${userinfo.email} ${userinfo.picture}`)
 
-        console.log(authResult);
         localStorage.setItem('access_token', authResult.accessToken);
         localStorage.setItem('id_token', authResult.idToken);
         localStorage.setItem('expires_at', expiresAt);
@@ -61,10 +70,13 @@ export default class Auth {
         history.replace('/home');
         //API user info
 
-        const userinfo={
-
-        }
-        axios.post('api/home', authResult)
+       
+        // axios.post('api/home', authResult)
+        // const userEmail={
+        //   email:userinfo.email
+        // }
+        // axios.get('api/home', userEmail)
+       axios.post('api/home', userinfo)
           .then(function (response) {
             console.log(response);
           })
