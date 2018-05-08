@@ -1,0 +1,54 @@
+
+.Logo {
+  left: 10px;
+  margin-top: 1.5%;
+  margin-left: 10px;
+  {/*border: 2px solid rgba(255,131,0);*/}
+}
+
+.App-logo {
+  float: left;
+  width: 145px;
+  height: 55px;
+  -webkit-transition: margin .125s ease;
+  transition: margin .125s ease;
+  {/*border: 2px solid rgba(255,131,0);*/}
+}
+
+.App-logo2 {
+  float: left;
+  width: 145px;
+  height: 55px;
+  -webkit-transition: margin .125s ease;
+  transition: margin .125s ease;
+  {/*border: 2px solid rgba(255,131,0);*/}
+}
+
+
+@media (max-width:991px) {
+
+.App-logo {
+  float: left;
+  width: 91px;
+  height: 31px;
+  -webkit-transition: margin .125s ease;
+  transition: margin .125s ease;
+  border: 2px solid rgba(255,131,0);
+}
+
+.App-logo2 {
+  float: left;
+  width: 91px;
+  height: 31px;
+  -webkit-transition: margin .125s ease;
+  transition: margin .125s ease;
+  {/*border: 2px solid rgba(255,131,0);*/}
+}
+
+}
+
+@media (max-width:767px) {
+  .Logo {
+    width: 25%;
+  }
+}

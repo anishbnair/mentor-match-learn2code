@@ -1,21 +1,23 @@
 
 import React, { Component } from "react";
+import "./HomePage.css";
 import Panel from "../components/Panel";
 import Footer from "../components/Footer";
-import Profile from "../components/Profile/Profile";
-import "./HomePage.css";
 
 class HomePage extends Component {
 
-  componentWillMount() {
+ componentWillMount() {
     this.setState({ profile: {} });
     const { userProfile, getProfile } = this.props.auth;
-    console.log(this.props.auth);
-    if (!userProfile) {
-      console.log("no profile....");
+    let accessToken = localStorage.getItem("access_token");
+    console.log ("access token: ", accessToken);
+    if (!userProfile && accessToken) {
+      console.log ("not null");  
+      getProfile((err, profile) => {
+        this.setState({ profile });
+      });
     } else {
       this.setState({ profile: userProfile });
-      console.log("got profile.....");
     }
   }
 
@@ -23,13 +25,13 @@ class HomePage extends Component {
     const { profile } = this.state;
   
     return (
-      <div>
+      <div className="home">
 
         <div className="container-profile-home">
-          <h1>{profile.name}</h1>
-          <div className="profile-area-home">
-                <img src={profile.picture} alt="" />
-          </div>
+          {/* <h1>{profile.name}</h1>
+             <div className="profile-area-home">
+              <img src={profile.picture} alt="" />
+             </div>*/}
         </div>
   
         <Panel />

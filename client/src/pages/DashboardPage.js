@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import TechPath from "../components/DashCards/TechPath";
 import PrevConnect from "../components/DashCards/PreviousConnections";
 import Resources from "../components/DashCards/MyResources";
-import Profile from "../components/Profile/Profile";
+
 import "./DashboardPage.css";
 
 class DashboardPage extends Component {
@@ -14,20 +14,20 @@ class DashboardPage extends Component {
   componentWillMount() {
     this.setState({ profile: {} });
     const { userProfile, getProfile } = this.props.auth;
-    console.log(this.props.auth);
     if (!userProfile) {
-      console.log("no profile....");
+      getProfile((err, profile) => {
+        this.setState({ profile });
+      });
     } else {
       this.setState({ profile: userProfile });
-      console.log("got profile.....");
     }
   }
 
   render() {
     const { profile } = this.state;
-
+    console.log("contents of profile: ",profile);
     return (
-      <div>
+      <div className="dash">
         {/* <Nav title="Mentor Match" /> */}
 
         <div className="container-profile-dash">
