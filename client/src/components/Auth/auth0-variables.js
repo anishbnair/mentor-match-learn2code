@@ -24,5 +24,5 @@ export const AUTH_CONFIG = {
 
   domain: "mentor-match.auth0.com",
   clientId: "07VYWunyh6eFyo25KrcLuD8Cynu9PvY6",
-  callbackUrl: process.env.AUTH0_CALLBACK_URL
+  callbackUrl: "https://mentor-match-learn2code.herokuapp.com/callback"
 };
