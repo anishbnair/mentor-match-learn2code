@@ -3,7 +3,7 @@ const db = require("../models");
 mongoose.Promise = global.Promise;
 
 // This file empties the Resources collection and inserts the resources below
-
+//usersSeedDB.js also has this code below. usersSeedDB.js is only listed in the script in package.json
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/mentor-match",
   {

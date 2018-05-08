@@ -50,7 +50,7 @@ const usersSeed = [
       menteeUsers:"Empty"
     },
 ];
-  console.log("seed testing")
+  console.log("users seed inserted")
 db.Users
 .remove({})
 .then(() => db.Users.collection.insertMany(usersSeed))
@@ -93,7 +93,7 @@ const resourcesSeed = [
  }
    }
  ];
- console.log("resources seeds checkya")
+ console.log("resources seed inserted")
  db.Resources
    .remove({})
    .then(() => db.Resources.collection.insertMany(resourcesSeed))
