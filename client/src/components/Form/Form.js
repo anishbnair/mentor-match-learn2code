@@ -30,7 +30,17 @@ constructor(props){
   super(props);
   this.state ={
     username:'',
-    email: '',
+    email:'',
+    html:'',
+    css:'',
+    javascript:'',
+    jquery:'',
+    git:'',
+    mongodb:'',
+    express:'',
+    nodejs:'',
+    react:'',
+
 
   };
    this.handleSubmit = this.handleSubmit.bind(this);
@@ -40,7 +50,7 @@ constructor(props){
 handleInputChange = event =>{
   const{name,value}= event.target;
   this.setState({
-     checked:true,
+    // checked:true,
       [name]: value
     });
 }
@@ -49,7 +59,9 @@ handleInputChange = event =>{
 handleSubmit(event,err){
   event.preventDefault();
   const target = event.target;
-  const value = target.type === 'checkbox' ? target.checked : target.value;
+  const value = target.value;// === 'checkbox' ? target.checked : target.value;
+  
+  //const value = target.type === 'checkbox' ? target.checked : target.value;
   const name = target.name;
 // // for(var i=0;i<this.state.value;i++){
 // //
@@ -59,13 +71,23 @@ handleSubmit(event,err){
 //  }
 
 const userpathinfo=
-{username:this.state.username,
-  email:this.state.username
+{ 
+  username:this.state.username,
+  email:this.state.email,
+  html:this.state.html,
+  css:this.state.css,
+  javascript:this.state.javascript,
+  jquery:this.state.jquery,
+  git:this.state.git,
+  mongodb:this.state.mongodb,
+  express:this.state.express,
+  nodejs:this.state.nodejs,
+  react:this.state.react,
 }
 
 axios.post('api/dashboard', userpathinfo)
   .then(function (response) {
-    console.log(response);
+    console.log("bring it around town" + response);
   })
   .catch(function (error) {
     console.log(error);
@@ -103,15 +125,15 @@ axios.post('api/dashboard', userpathinfo)
                 />
 
                 <FormGroup>
-                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="HTML" value='HTML'>HTML</Checkbox>
-                    <Checkbox type="checkbox" onChange={this.handleInputChange}  name="CSS" value='CSS' >CSS</Checkbox>
-                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="Javascript" value='JavaScript' >JavaScript</Checkbox>
-                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="jQuery" value='jQuery'>jQuery</Checkbox>
+                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="html" value="html">HTML</Checkbox>
+                    <Checkbox type="checkbox" onChange={this.handleInputChange}  name="CSS" value='css' >CSS</Checkbox>
+                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="Javascript" value='javascript' >JavaScript</Checkbox>
+                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="jQuery" value='jquery'>jQuery</Checkbox>
                     <Checkbox type="checkbox" onChange={this.handleInputChange} name="Git" value='Git'>Git</Checkbox>
-                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="MongoDB" value='MongoDB' >MongoDB</Checkbox>
-                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="Express.js" value='Express.js' >Express.js</Checkbox>
-                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="Node.js" value='Node.js' >Node.js</Checkbox>
-                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="React" value='React' >React.js</Checkbox>
+                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="MongoDB" value='mongodb' >MongoDB</Checkbox>
+                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="Express.js" value='express' >Express.js</Checkbox>
+                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="Node.js" value='nodejs' >Node.js</Checkbox>
+                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="React" value='react' >React.js</Checkbox>
                 </FormGroup>
 
                 <Button onClick={this.handleSubmit} type="submit">Submit</Button>
