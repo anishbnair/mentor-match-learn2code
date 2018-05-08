@@ -1,18 +1,17 @@
 import React, { Component } from "react";
 import Footer from "../components/Footer";
-import Profile from "../components/Profile/Profile";
 import "./Resources.css";
 
 class Resources extends Component {
   componentWillMount() {
     this.setState({ profile: {} });
     const { userProfile, getProfile } = this.props.auth;
-    console.log(this.props.auth);
     if (!userProfile) {
-      console.log("no profile....");
+      getProfile((err, profile) => {
+        this.setState({ profile });
+      });
     } else {
       this.setState({ profile: userProfile });
-      console.log("got profile.....");
     }
   }
 
@@ -20,7 +19,7 @@ class Resources extends Component {
     const { profile } = this.state;
 
     return (
-      <div>
+      <div className="resc">
         <div className="container-profile-resc">
           <h1>{profile.name}</h1>
           <div className="profile-area-resc">

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 // import { Panel, ControlLabel, Glyphicon } from "react-bootstrap";
 import { Panel } from "react-bootstrap";
 import "./Profile.css";
+import Footer from "../Footer";
 
 class Profile extends Component {
   componentWillMount() {
@@ -15,6 +16,7 @@ class Profile extends Component {
       this.setState({ profile: userProfile });
     }
   }
+
   render() {
     const { profile } = this.state;
     return (
@@ -32,9 +34,17 @@ class Profile extends Component {
               <ControlLabel><Glyphicon glyph="user" /> Nickname</ControlLabel>
               <h3>{profile.nickname}</h3> 
             </div>*/}
-            <pre>{JSON.stringify(profile, null, 2)}</pre>
+
+            <h3>Profile Nickname: {profile.nickname}</h3>
+
+            <h3>Profile Name: {profile.name}</h3>
+
+            <img src={profile.picture} alt="" className="profile-prof" />
+
+            {/*<pre>{JSON.stringify(profile, null, 2)}</pre>*/}
           </Panel>
         </div>
+        <Footer />
       </div>
     );
   }

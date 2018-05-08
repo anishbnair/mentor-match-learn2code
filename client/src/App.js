@@ -4,9 +4,6 @@ import "./App.css";
 
 import Wrapper from "./components/Wrapper";
 import Logo from "./components/Logo";
-// import Footer from "./components/Footer";
-// import MMHeaderCard from "./components/MMHeaderCard";
-// import mmheaders from "./mmheaders.json";
 
 class App extends Component {
   goTo(route) {
@@ -20,11 +17,6 @@ class App extends Component {
   logout() {
     this.props.auth.logout();
   }
-
-  // Setting this.state.mmheaders to the mmheaders json array
-  // state = {
-  //   mmheaders
-  // };
 
   componentDidMount() {
     // redirect to home page
@@ -41,13 +33,15 @@ class App extends Component {
           <div>
             <Navbar fluid className="App-navbar">
               <Navbar.Header>
-                <Button
-                  data-primary={true}
-                  className="Button"
-                  onClick={this.goTo.bind(this, "home")}
-                >
-                  Home
-                </Button>
+                {isAuthenticated() && (
+                  <Button
+                    data-primary={true}
+                    className="Button"
+                    onClick={this.goTo.bind(this, "home")}
+                  >
+                    Home
+                  </Button>
+                )}
                 {!isAuthenticated() && (
                   <Button
                     data-primary={true}
@@ -113,21 +107,6 @@ class App extends Component {
             <div className="container">{this.props.children}</div>
           </div>
         </header>
-
-        {/* <Panel /> */}
-
-        {/*{this.state.mmheaders.map(mmheader => (
-          <MMHeaderCard
-            id={mmheader.id}
-            key={mmheader.id}
-            name={mmheader.name}
-            image={mmheader.image}
-            occupation={mmheader.occupation}
-            location={mmheader.location}
-          />
-        ))}*/}
-
-        {/* <Footer /> */}
       </Wrapper>
     );
   }
