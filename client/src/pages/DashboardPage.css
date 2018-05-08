@@ -1,16 +1,9 @@
-.Footer {
-  position: fixed;
-  right: 0;
-  text-align: center;
-}
-
 .container-profile-dash {
   position: absolute;
   margin-top: -7%;
   margin-left: 73%;
   width: 25%;
   height: 60px;
-
 }
 
 h1 {
