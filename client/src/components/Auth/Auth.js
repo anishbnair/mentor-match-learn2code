@@ -52,8 +52,18 @@ export default class Auth {
         let expiresAt = JSON.stringify(
             authResult.expiresIn * 1000 + new Date().getTime()
         );
+        //testing:
+        console.log("(client side)this is user info:" + JSON.stringify(authResult));
+        
+        const userInfo={
+         name: authResult.idTokenPayload.name,
+         email: authResult.idTokenPayload.nickname + "@gmail.com",
+         picture: authResult.idTokenPayload.picture,
+        
+        }
+        //testing:
+        console.log(`(client side)this is the user ${userInfo.name} ${userInfo.email} ${userInfo.picture}`)
 
-        console.log(authResult);
         localStorage.setItem('access_token', authResult.accessToken);
         localStorage.setItem('id_token', authResult.idToken);
         localStorage.setItem('expires_at', expiresAt);
@@ -61,12 +71,19 @@ export default class Auth {
         history.replace('/home');
         //API user info
 
-        const userinfo={
 
-        }
-        axios.post('api/home', authResult)
+       
+     
+         axios.post('api/home', userInfo)
           .then(function (response) {
-            console.log(response);
+            //testing:
+            console.log(`user has been found: ${JSON.stringify(response.data)}`);
+           //testing ended
+              // if(JSON.stringify(response.data)==="null"){
+              //   console.log("User is not in database")
+              // }else{
+
+              // }
           })
           .catch(function (error) {
             console.log(error);

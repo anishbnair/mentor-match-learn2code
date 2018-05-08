@@ -33,6 +33,10 @@ descript:{
   type:String,
   // required:true
 },
+skill:{
+type:String,
+//requred:true
+},
   userCreated: {
     type: Date,
     default: Date.now
