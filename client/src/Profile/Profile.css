@@ -1,0 +1,48 @@
+.container-profile {
+	position: absolute;
+	margin-top: -7%;
+	margin-left: 73%;
+	width: 25%;
+	height: 60px;
+	{/*border: 8px solid rgba(8,232,222);*/}
+}
+
+h1 {
+	float: right;
+	margin-left: 10px;
+	margin-top: 20px;
+}
+
+ .profile-area img {
+	float: right;
+	display: inline-block;
+  right: 10px;
+  max-width: 50px;
+  margin-bottom: 10px;
+  color: white;
+  }
+
+.pan-img {
+    max-width: 60%;
+    margin: 20px 0px 20px 20px;
+    color: white;
+    box-shadow: 0px 0px 0px 5px #000, 0px 0px 0px 10px #f5f5f1;
+  }
+
+.panel > .panel-heading {
+  font-size: 25px;
+  background-image: none;
+  background-color: #6da828;
+  color: #f5f5f1;
+}
+.panel > .panel-body {
+    background-color: #a86328;
+    color: #f5f5f1;
+  }
+
+.panel > .panel-footer {
+    background-color: #a8286d;
+    color: #f5f5f1;
+    font-size: 25px;
+  }
+

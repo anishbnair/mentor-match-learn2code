@@ -29,6 +29,9 @@ class Profile extends Component {
           </div>
         </div>
 
+
+
+
         <div className="panel-body">
           <Panel header="Profile">
             {/*<div>
@@ -36,12 +39,14 @@ class Profile extends Component {
               <h3>{profile.nickname}</h3> 
             </div>*/}
 
-            <h3>Profile Nickname: {profile.nickname}</h3>
+            <div class="panel-heading">{profile.name}</div>
 
-            <h3>Profile Name:   {profile.name}</h3>
-
-            <img src={profile.picture} alt="" className="profile-prof" />
+            <div class="panel-body">
+              <img src={profile.picture} alt="" className="pan-img" />
+            </div>
          
+            <div class="panel-footer">{profile.nickname}</div>
+
             {/*<pre>{JSON.stringify(profile, null, 2)}</pre>*/}           
           </Panel>
        </div>
