@@ -61,7 +61,7 @@ handleSubmit(event,err){
   const name = target.name;
 
 
-  console.log("yes please: " + auth.grabInfo());
+  console.log("yes please: " + (new auth).grabProfile);
   //.userInfo.email:authResult.idTokenPayload.nickname + "@gmail.com",
 
 console.log("this is user info:")

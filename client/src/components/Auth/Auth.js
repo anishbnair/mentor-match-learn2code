@@ -25,7 +25,8 @@ export default class Auth {
     this.isAuthenticated = this.isAuthenticated.bind(this);
     this.getAccessToken = this.getAccessToken.bind(this);
     this.getProfile = this.getProfile.bind(this);
-    this.grabProfile = this.getProfile.bind(this);
+    this.grabProfile = this.grabInfo.bind(this);
+
   }
 
   login() {
@@ -35,6 +36,7 @@ export default class Auth {
   handleAuthentication() {
     this.auth0.parseHash((err, authResult) => {
       if (authResult && authResult.accessToken && authResult.idToken) {
+        this.grabProfile=this.grabInfo(authResult);
         this.setSession(authResult);
         history.replace("/home");
       } else if (err) {
@@ -44,8 +46,8 @@ export default class Auth {
       }
     });
   }
-
-
+      grab
+ 
     setSession(authResult) {
         // Set the time that the access token will expire at
         let expiresAt = JSON.stringify(
@@ -63,7 +65,15 @@ export default class Auth {
         history.replace('/home');
         //API user info
        
-                 
+       // function grabInfo(authResult){
+        
+       const userInfo={
+            name:authResult.idTokenPayload.name,
+            email:authResult.idTokenPayload.nickname + "@gmail.com",
+            picture:authResult.idTokenPayload.picture,
+          }
+       //      return userInfo;
+       //  }      
 
         API.createUser({
           
@@ -76,7 +86,7 @@ export default class Auth {
            .catch(err => console.log)
           }
 
-          grabInfo(){
+          grabInfo(authResult){
             const userInfo={
               name:authResult.idTokenPayload.name,
               email:authResult.idTokenPayload.nickname + "@gmail.com",
