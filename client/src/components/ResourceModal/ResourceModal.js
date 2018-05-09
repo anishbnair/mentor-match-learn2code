@@ -1,8 +1,6 @@
 import React from 'react'; 
 import {Button, Modal,OverlayTrigger,Popover,Tooltip} from 'react-bootstrap';
 import "./ResourceModal.css";
-import ResourceCard from "../ResourcesCards/ResourcesCards";
-
 
 
 export default class ResourceModal extends React.Component {
@@ -33,14 +31,16 @@ export default class ResourceModal extends React.Component {
     render() {
         const popover = ( 
             <Popover id="modal-popover"   title="popover">
-            very popover.such engagement </Popover>
+            very popover.such engagement 
+            </Popover>
         );
         const tooltip = <Tooltip id="modal-tooltip">wow.</Tooltip>;
 
         return ( 
             <div>
 
-            <Button bsStyle = "primary" bsSize="small" onClick={this.handleShow}>Show Resources</Button>
+            {/* <Button bsStyle = "primary" bsSize="small" onClick={this.handleShow}>Show Resources</Button> */}
+            <img alt={this.props.image.name} src={this.props.image.image} onClick={this.handleShow} />
 
             <Modal className = "modal"show = {this.state.show} onHide = {this.handleClose} >
             <Modal.Header closeButton>
