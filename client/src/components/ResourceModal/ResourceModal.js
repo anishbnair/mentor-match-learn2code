@@ -1,9 +1,12 @@
 import React from 'react'; 
 import {Button, Modal,OverlayTrigger,Popover,Tooltip} from 'react-bootstrap';
+import "./ResourceModal.css";
+import ResourceCard from "../ResourcesCards/ResourcesCards";
 
 
 
 export default class ResourceModal extends React.Component {
+    
     constructor(props, context) {
         super(props, context);
 
@@ -36,7 +39,8 @@ export default class ResourceModal extends React.Component {
 
         return ( 
             <div>
-            <Button bsStyle = "primary" bsSize="medium" onClick={this.handleShow}>Show Resources</Button>
+
+            <Button bsStyle = "primary" bsSize="small" onClick={this.handleShow}>Show Resources</Button>
 
             <Modal className = "modal"show = {this.state.show} onHide = {this.handleClose} >
             <Modal.Header closeButton>
