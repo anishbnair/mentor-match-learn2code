@@ -29,9 +29,6 @@ class Profile extends Component {
           </div>
         </div>
 
-
-
-
         <div className="panel-body">
           <Panel header="Profile">
             {/*<div>
