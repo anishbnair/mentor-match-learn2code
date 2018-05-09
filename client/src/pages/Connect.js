@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Mentor from "../components/Mentor/Mentor.js";
 import sampleMentors from "../components/Mentor/seeds-mentor.js";
 import Footer from "../components/Footer";
+import API from "../utils/API.js"
 import "./Connect.css";
 
 class Connect extends Component {
@@ -14,7 +15,14 @@ class Connect extends Component {
   }
 
   loadMentors = () => {
-    this.setState({ mentors: sampleMentors });
+    //this.setState({ mentors: sampleMentors });
+    API.showConnection()
+      .then(res => {
+        console.log("success");
+        console.log(res);
+        this.setState({ mentors: res.data })
+      })
+      .catch(err => console.log("fail"));    
   };
 
   componentWillMount() {
