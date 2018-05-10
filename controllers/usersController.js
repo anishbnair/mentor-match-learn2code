@@ -32,15 +32,16 @@ module.exports = {
        )
        .catch(err => res.status(422).json(err));
       
-  
+       
 },
-
-  findById: function(req, res) {
-    db.Users
-      .findById(req.body.id)
-      // .findById(req.id)
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+//user to return user's preferences on the dasboardpages.js
+  findByEmail: function(req, res) {
+    res.send("users preferences has been sent to the back! Next step database...")
+    // db.Users
+    //   .findById(req.body.id)
+    //   // .findById(req.id)
+      // .then(dbModel => res.json(dbModel))
+      // .catch(err => res.status(422).json(err));
   },
   create: function(req, res) {
     db.Users
