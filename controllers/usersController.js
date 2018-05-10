@@ -9,7 +9,7 @@ module.exports = {
       .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
-  },
+  },//findOne method is for signin only
   findOne: function(req, res) {
    console.log("findone console:" + JSON.stringify(req.body.email))
      db.Users
