@@ -40,6 +40,7 @@ showResourceList: function(){
 },
 
 showConnection: function(){
+	console.log("this is showConnection");
   return axios.get('/api/connect')
 }
 

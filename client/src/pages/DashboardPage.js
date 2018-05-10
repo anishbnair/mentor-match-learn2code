@@ -6,13 +6,32 @@ import Footer from "../components/Footer";
 import TechPath from "../components/DashCards/TechPath";
 import PrevConnect from "../components/DashCards/PreviousConnections";
 import Resources from "../components/DashCards/MyResources";
-
+import API from "../utils/API";
 import "./DashboardPage.css";
 
 class DashboardPage extends Component {
+  state = {
+    mentees: {}
+  };
+
+  componentDidMount() {
+    this.loadMentees();
+  }
+
+  loadMentees = () => {
+    API.getUserProfile()
+      .then(res => {
+        console.log("success");
+        console.log(res);
+        this.setState({ mentees: res.data });
+      })
+      .catch(err => console.log("fail"));
+  };
+
   componentWillMount() {
     this.setState({ profile: {} });
     const { userProfile, getProfile } = this.props.auth;
+    console.log("props.auth: ", this.props.auth);
     if (!userProfile) {
       getProfile((err, profile) => {
         this.setState({ profile });

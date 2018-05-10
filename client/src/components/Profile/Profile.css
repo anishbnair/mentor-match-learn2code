@@ -4,7 +4,6 @@
   margin-left: 73%;
   width: 25%;
   height: 60px;
-  /*border: 8px solid rgba(8,232,222);*/
 }
 
 h1 {
@@ -22,23 +21,25 @@ h1 {
   color: white;
 }
 
-.profile-prof {
-  float: left;
-  display: inline-block;
-  right: 10px;
-  max-width: 50%;
-  margin-left: 5px;
-  margin-bottom: 10px;
+.pan-img {
+  max-width: 60%;
+  margin: 20px 0px 20px 20px;
   color: white;
-  border: 4px solid black;
+  box-shadow: 0px 0px 0px 5px #000, 0px 0px 0px 10px #f5f5f1;
 }
 
-h3 {
-  margin-top: 4%;
-  margin-bottom: 4%;
+.panel > .panel-heading {
+  background-image: none;
+  background-color: #28a8a3;
+  color: #f5f5f1;
 }
-.panel-body {
-  margin-left: 5%;
-  width: 100%;
-  height: 100%;
+.panel > .panel-body {
+  background-color: #d79257;
+  color: #f5f5f1;
+  height: 88%;
+}
+
+.panel > .panel-footer {
+  background-color: #696969;
+  color: #f5f5f1;
 }
