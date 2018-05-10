@@ -4,6 +4,9 @@
   margin-left: 73%;
   width: 25%;
   height: 60px;
+   {
+    /*border: 8px solid rgba(8,232,222);*/
+  }
 }
 
 h1 {
@@ -22,24 +25,27 @@ h1 {
 }
 
 .pan-img {
-  max-width: 60%;
-  margin: 20px 0px 20px 20px;
+  max-width: 70%;
+  margin: 40px 0px 40px 80px;
   color: white;
   box-shadow: 0px 0px 0px 5px #000, 0px 0px 0px 10px #f5f5f1;
 }
 
 .panel > .panel-heading {
   background-image: none;
-  background-color: #28a8a3;
+  background-color: #438496;
   color: #f5f5f1;
-}
-.panel > .panel-body {
-  background-color: #d79257;
-  color: #f5f5f1;
-  height: 88%;
+  font-weight: bolder;
 }
 
-.panel > .panel-footer {
-  background-color: #696969;
+/* .panel > .panel-body {
+  background-image: url("../../images/mentbckg1.jpg");
   color: #f5f5f1;
+  height: 88%;
+} */
+
+.panel > .panel-footer {
+  background-color: #438496;
+  color: #f5f5f1;
+  font-weight: bolder;
 }

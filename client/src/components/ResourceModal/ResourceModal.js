@@ -1,5 +1,6 @@
 import React from 'react'; 
 import {Button, Modal,OverlayTrigger,Popover,Tooltip} from 'react-bootstrap';
+import ResourceList from "../ResourceList/ResourceList"
 import "./ResourceModal.css";
 
 
@@ -48,7 +49,7 @@ export default class ResourceModal extends React.Component {
             </Modal.Header> 
             <Modal.Body>
             
-           {/*  List of resources goes here */}
+                <ResourceList />
             </Modal.Body> 
             <Modal.Footer >
             <Button onClick={this.handleClose}> Close</Button> 
