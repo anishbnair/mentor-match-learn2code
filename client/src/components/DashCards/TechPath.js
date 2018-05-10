@@ -1,9 +1,14 @@
 import React from "react";
 import "./DashCards.css";
 import Interests from "../Modal/Modal.js";
+import API from "../../utils/API";
+
+
 
 class TechPath extends React.Component {
   //add state
+
+  
   render() {
     return (
       <div>

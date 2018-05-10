@@ -10,12 +10,14 @@ import API from "../utils/API";
 import "./DashboardPage.css";
 
 class DashboardPage extends Component {
+
   state = {
     mentees: {}
   };
 
   componentDidMount() {
     this.loadMentees();
+    this.loadPreferences();
   }
 
   loadMentees = () => {
@@ -23,9 +25,18 @@ class DashboardPage extends Component {
       .then(res => {
         console.log("success");
         console.log(res);
-        this.setState({ mentees: res.data });
+        this.setState({ mentees: res.data })
       })
-      .catch(err => console.log("fail"));
+      .catch(err => console.log("fail"));    
+  };
+  
+  loadPreferences=()=>{
+   
+      API.getUserPreference().then(res =>
+          {   console.log("front end preferences has been sent and received!!" )
+              console.log(res.data)})
+      
+      
   };
 
   componentWillMount() {
@@ -61,7 +72,7 @@ class DashboardPage extends Component {
               <PrevConnect />
             </Column>
             <Column size="md-4 sm-3">
-            <TechPath auth={this.props.auth} />
+              <TechPath />
             </Column>
             <Column size="md-4 sm-3">
               <Resources />
@@ -76,3 +87,7 @@ class DashboardPage extends Component {
 }
 
 export default DashboardPage;
+
+
+
+

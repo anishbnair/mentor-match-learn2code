@@ -16,6 +16,9 @@ export default {
   return axios.get('/api/dashboard')
 
 },
+  getUserPreference:function(){
+  return axios.get('/api/home')
+},
 
   updateUserProfile:function(updateInfo){
   console.log("API.js" + JSON.stringify(updateInfo))
