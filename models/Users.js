@@ -52,20 +52,12 @@ mongodb:{
   default:false
   
 },
-express:{
-  type:Boolean,
-  default:false
-  
-},
 nodejs:{
   type:Boolean,
   default:false
   
 },
-react:{
-  type:Boolean,
-  default:false
-},
+
 skill:{
 type:String,
 //requred:true

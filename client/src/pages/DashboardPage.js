@@ -69,7 +69,9 @@ class DashboardPage extends Component {
               <PrevConnect />
             </Column>
             <Column size="md-4 sm-3">
-              <TechPath auth={this.props.auth} />
+
+            <TechPath auth={this.props.auth} />
+
             </Column>
             <Column size="md-4 sm-3">
               <Resources />
