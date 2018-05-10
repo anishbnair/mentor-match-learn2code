@@ -34,7 +34,7 @@ export default class Form extends React.Component {
 constructor(props){
   super(props);
   this.state ={
- 
+ email:this.props.auth.grabInfo().email
     };
 
 
@@ -60,15 +60,18 @@ handleSubmit(event,err){
   const value = target.value;
   const name = target.name;
 
+    //testing:
+  console.log("SUCCESS");
+  console.log(this.props.auth.grabInfo().email);
+    //end testing
 
-  console.log("yes please: " + (new auth).grabProfile);
-  //.userInfo.email:authResult.idTokenPayload.nickname + "@gmail.com",
+console.log("this is user info:" + JSON.stringify(this.state))
 
-console.log("this is user info:")
-//console.log( userpathinfo)
 console.log(this.state)
 API.updateUserProfile(this.state  
-).then(res => console.log("this is response from form.js" +res))
+).then(res =>
+    {   console.log("this is response for api updated:" )
+        console.log(res.data)})
 // axios.post('/api', this.state)
 //   .then(function (response) {
 //     console.log("bring it around town" + response);
