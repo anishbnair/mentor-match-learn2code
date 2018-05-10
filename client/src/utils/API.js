@@ -17,8 +17,9 @@ export default {
 
 },
 
-  updateUserProfile:function(){
-  return axios.put('/api/dashboard')
+  updateUserProfile:function(updateInfo){
+  console.log("API.js" + JSON.stringify(updateInfo))
+    return axios.put('/api/home', updateInfo)
 },
 
 saveResources: function(){

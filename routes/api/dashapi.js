@@ -9,6 +9,6 @@ var Users = require("../../models/Users")
 //2. 
 
 router.route("/").post(usersController.findOne)
-
+.put(usersController.update)
 
 module.exports = router;
