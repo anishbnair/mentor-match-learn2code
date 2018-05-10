@@ -35,6 +35,7 @@ class App extends Component {
               <Navbar.Header>
                 {isAuthenticated() && (
                   <Button
+                    bsStyle="primary"
                     data-primary={true}
                     className="Button"
                     onClick={this.goTo.bind(this, "home")}
@@ -44,6 +45,7 @@ class App extends Component {
                 )}
                 {!isAuthenticated() && (
                   <Button
+                    bsStyle="primary"
                     data-primary={true}
                     className="Button"
                     onClick={this.login.bind(this)}
@@ -53,6 +55,7 @@ class App extends Component {
                 )}
                 {isAuthenticated() && (
                   <Button
+                    bsStyle="primary"
                     data-primary={true}
                     className="Button"
                     onClick={this.goTo.bind(this, "profile")}
@@ -63,7 +66,6 @@ class App extends Component {
                 {isAuthenticated() && (
                   <Button
                     bsStyle="primary"
-                    // className="btn-margin"
                     data-primary={true}
                     className="Button"
                     onClick={this.goTo.bind(this, "dashboard")}
@@ -74,7 +76,6 @@ class App extends Component {
                 {isAuthenticated() && (
                   <Button
                     bsStyle="primary"
-                    // className="btn-margin"
                     data-primary={true}
                     className="Button"
                     onClick={this.goTo.bind(this, "connect")}
@@ -85,7 +86,6 @@ class App extends Component {
                 {isAuthenticated() && (
                   <Button
                     bsStyle="primary"
-                    // className="btn-margin"
                     data-primary={true}
                     className="Button"
                     onClick={this.goTo.bind(this, "resources")}
@@ -95,6 +95,7 @@ class App extends Component {
                 )}
                 {isAuthenticated() && (
                   <Button
+                    bsStyle="primary"
                     data-primary={true}
                     className="Button"
                     onClick={this.logout.bind(this)}

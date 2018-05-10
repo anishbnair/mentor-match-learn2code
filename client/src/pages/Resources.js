@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import Footer from "../components/Footer";
+import Container from "../components/Container";
+import Column from "../components/Column";
+import Row from "../components/Row";
 import "./Resources.css";
+import ResourceCard from "../components/ResourcesCards/ResourcesCards";
+import techlogo from "../tech_image.json";
 
 class Resources extends Component {
   componentWillMount() {
@@ -27,10 +32,25 @@ class Resources extends Component {
           </div>
         </div>
 
+        <Container>
+          <div className="logo-cards">
+          {techlogo.map(logo => (
+            <ResourceCard 
+              key={logo.id}
+              image={logo.image}
+            />
+          ))}
+          </div>
+        </Container>
+      
         <Footer />
       </div>
+
     );
   }
 }
 
+
 export default Resources;
+
+
