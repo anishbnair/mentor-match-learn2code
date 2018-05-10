@@ -35,11 +35,11 @@ class Profile extends Component {
               <h3>{profile.nickname}</h3> 
             </div>*/}
 
-            <h3>Profile Nickname: {profile.nickname}</h3>
-
-            <h3>Profile Name: {profile.name}</h3>
-
-            <img src={profile.picture} alt="" className="profile-prof" />
+            <div className="panel-heading">{profile.name}</div>
+            <div className="panel-body">
+              <img src={profile.picture} alt="" className="pan-img" />
+            </div>
+            <div className="panel-footer">{profile.nickname}</div>
 
             {/*<pre>{JSON.stringify(profile, null, 2)}</pre>*/}
           </Panel>

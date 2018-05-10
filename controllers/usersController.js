@@ -9,7 +9,7 @@ module.exports = {
       .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
-  },
+  },//findOne method is for signin only
   findOne: function(req, res) {
    console.log("findone console:" + JSON.stringify(req.body.email))
      db.Users
@@ -32,15 +32,16 @@ module.exports = {
        )
        .catch(err => res.status(422).json(err));
       
-  
+       
 },
-
-  findById: function(req, res) {
-    db.Users
-      .findById(req.body.id)
-      // .findById(req.id)
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+//user to return user's preferences on the dasboardpages.js
+  findByEmail: function(req, res) {
+    res.send("users preferences has been sent to the back! Next step database...")
+    // db.Users
+    //   .findById(req.body.id)
+    //   // .findById(req.id)
+      // .then(dbModel => res.json(dbModel))
+      // .catch(err => res.status(422).json(err));
   },
   create: function(req, res) {
     db.Users
@@ -49,8 +50,10 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   update: function(req, res) {
+    console.log("testing from update in userscontroller.js")
+    console.log( req.body)
     db.Users
-      .findOneAndUpdate({ _id: req.params.id }, req.body)
+      .findOneAndUpdate({"email": req.body.email },{html:true})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

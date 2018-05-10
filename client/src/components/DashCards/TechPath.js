@@ -1,9 +1,14 @@
 import React from "react";
 import "./DashCards.css";
 import Interests from "../Modal/Modal.js";
+import API from "../../utils/API";
+
+
 
 class TechPath extends React.Component {
   //add state
+
+  
   render() {
     return (
       <div>
@@ -12,7 +17,8 @@ class TechPath extends React.Component {
             <h3 className="panel-title">My Technology Path</h3>
           </div>
           <div className="panel-body">
-            <Interests />
+          {/* testing*/}
+          <Interests auth={this.props.auth}/>
           </div>
         </div>
       </div>

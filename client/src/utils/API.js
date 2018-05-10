@@ -3,17 +3,27 @@ import axios from "axios";
 
 export default {
 
-
+    //user is created in database
   createUser:function(userinfo){
-    return axios.post("/api/dashboard",userinfo)
+    return axios.post('api/home',userinfo)
   },
+  // createUser:function(userinfo){
+  //   return axios.post("/api/dashboard",userinfo)
+  // },
 
 
   getUserProfile: function(){
   return axios.get('/api/dashboard')
 
 },
+  getUserPreference:function(){
+  return axios.get('/api/home')
+},
 
+  updateUserProfile:function(updateInfo){
+  console.log("API.js" + JSON.stringify(updateInfo))
+    return axios.put('/api/home', updateInfo)
+},
 
 saveResources: function(){
 return axios.put('/api/dashboard')
