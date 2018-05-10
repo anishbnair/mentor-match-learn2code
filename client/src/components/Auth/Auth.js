@@ -1,19 +1,16 @@
 import auth0 from 'auth0-js';
 import { AUTH_CONFIG } from './auth0-variables';
 import history from '../../history';
-import API from "../../utils/API";
-
+import API from '../../utils/API';
 
 export default class Auth {
-
-  
   auth0 = new auth0.WebAuth({
     domain: AUTH_CONFIG.domain,
     clientID: AUTH_CONFIG.clientId,
     redirectUri: AUTH_CONFIG.callbackUrl,
     audience: `https://${AUTH_CONFIG.domain}/userinfo`,
-    responseType: "token id_token",
-    scope: "openid profile"
+        responseType: 'token id_token',
+        scope: 'openid profile'
   });
 
   userProfile;
@@ -119,9 +116,8 @@ export default class Auth {
     localStorage.removeItem("expires_at");
     this.userProfile = null;
     // navigate to the home route
-    history.replace("/home");
+        history.replace('/home');
   }
-
 
     isAuthenticated() {
         // Check whether the current time is past the
@@ -129,6 +125,4 @@ export default class Auth {
         let expiresAt = JSON.parse(localStorage.getItem('expires_at'));
         return new Date().getTime() < expiresAt;
     }
-
 }
-
