@@ -3,6 +3,7 @@ const db = require("../models");
 // Defining methods for the UserssController
 module.exports = {
   findAll: function(req, res) {
+    console.log("******************findAll method****************");
     db.Users
       .find(req.query)
       .sort({ date: -1 })
