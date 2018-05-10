@@ -17,10 +17,6 @@ email:{
     type:String,
     require:true
 },
-password:{
-    type:String,
-    // require:true
-},
 github:{
     type:String,
     // require:true
@@ -32,6 +28,43 @@ picture:{
 descript:{
   type:String,
   // required:true
+},
+html:{
+  type:Boolean,
+  default:false
+},
+css:{
+  type:Boolean,
+  default:false
+},
+javascript:{
+  type:Boolean,
+  default:false
+  
+},
+jquery:{
+  type:Boolean,
+  default:false
+  
+},
+mongodb:{
+  type:Boolean,
+  default:false
+  
+},
+express:{
+  type:Boolean,
+  default:false
+  
+},
+nodejs:{
+  type:Boolean,
+  default:false
+  
+},
+react:{
+  type:Boolean,
+  default:false
 },
 skill:{
 type:String,
