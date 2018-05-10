@@ -4,31 +4,7 @@ import axios from "axios";
 import API from "../../utils/API";
 import auth from "../Auth/Auth.js"
 
-console.log("authorization email " + auth);//.userInfo.email:authResult.idTokenPayload.nickname + "@gmail.com",
-//)
-// function FieldGroup({ id, label, help, ...props }) {
-//     return (
-//         <FormGroup controlId={id}>
-//             <ControlLabel>{label}</ControlLabel>
-//             <FormControl {...props} />
-//             {help && <HelpBlock>{help}</HelpBlock>}
-//         </FormGroup>
-//     );
-// };
-
- // function sendtoDatab(e ,err){
- //   e.preventDefault();
- //   if (err) throw err;
- //   alert("This value"+this.value);
- // userInput={}
- //  axios.post('api/path', formControlsText, formControlsEmail)
- //  .then(function(response){
- //    console.log(response);
- //  })
- //  .catch(function(error){
- //    console.log(error);
- //  });
-// };
+console.log("authorization email " + auth);
 
 export default class Form extends React.Component {
 constructor(props){
@@ -72,14 +48,7 @@ API.updateUserProfile(this.state
 ).then(res =>
     {   console.log("this is response for api updated:" )
         console.log(res.data)})
-// axios.post('/api', this.state)
-//   .then(function (response) {
-//     console.log("bring it around town" + response);
-//   })
-//   .catch(function (error) {
-//     console.log(error);
-//   });
-//   console.log(userpathinfo);
+
 };
 
 
