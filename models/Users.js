@@ -67,13 +67,13 @@ type:String,
     default: Date.now
   },
   mentoredUsers:{
-    type:Schema.Types.ObjectId,
-    ref:"Users",
+    type:[String],
+    
     // default:"Empty"
   },
   menteeUsers:{
-    type:  Schema.Types.ObjectId,
-    ref:"Users",
+    type: [String],
+    
     // default:"Empty"
   },
 
