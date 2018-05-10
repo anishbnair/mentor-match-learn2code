@@ -1,17 +1,21 @@
 import React from "react";
-import {Panel, Button} from 'react-bootstrap';
+import { Panel, Button } from 'react-bootstrap';
 import "./ResourcesCards.css";
 import ResourceModal from "../ResourceModal/ResourceModal";
 
 
-const ResourceCard= props=> (
+const ResourceCard = props => (
 
-        <div className="resources">
-            <img alt={props.name} src={props.image}/>
-            <ResourceModal />   
-        </div>
-    );
+    <div className="resources">
+        <ResourceModal
+            image={{
+                image: props.image,
+                name: props.name
+            }}
+        />
+    </div>
+);
 
 
-export default ResourceCard; 
+export default ResourceCard;
 
