@@ -1,13 +1,36 @@
 import React, { Component } from "react";
 import Footer from "../components/Footer";
 import Container from "../components/Container";
-import Column from "../components/Column";
-import Row from "../components/Row";
+// import Column from "../components/Column";
+// import Row from "../components/Row";
 import "./Resources.css";
+import API from "../utils/API.js"
 import ResourceCard from "../components/ResourcesCards/ResourcesCards";
 import techlogo from "../tech_image.json";
 
 class Resources extends Component {
+   state = {
+     resources: {}
+   };
+
+   componentDidMount() {
+     this.showResourceList();
+   }
+
+   showResourceList = () => {
+    
+     API.showResourceList()
+       .then(res => {
+         console.log("success");
+         console.log(res);
+         this.setState({
+           resources: res.data
+         })
+       })
+       .catch(err => console.log("fail"));
+   };
+
+
   componentWillMount() {
     this.setState({ profile: {} });
     const { userProfile, getProfile } = this.props.auth;
@@ -34,6 +57,7 @@ class Resources extends Component {
 
         <Container>
           <div className="logo-cards">
+          
           {techlogo.map(logo => (
             <ResourceCard 
               key={logo.id}
