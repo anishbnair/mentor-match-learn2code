@@ -1,14 +1,12 @@
 import auth0 from 'auth0-js';
 import { AUTH_CONFIG } from './auth0-variables';
 import history from '../../history';
-import axios from "axios";
+import API from "../../utils/API";
 
-// import auth0 from "auth0-js";
-// import { AUTH_CONFIG } from "./auth0-variables";
-// import history from "../../history";
-// >>>>>>> b33c17f762297775b9372da4f26e3ce0a732f221
 
 export default class Auth {
+
+  
   auth0 = new auth0.WebAuth({
     domain: AUTH_CONFIG.domain,
     clientID: AUTH_CONFIG.clientId,
@@ -27,6 +25,8 @@ export default class Auth {
     this.isAuthenticated = this.isAuthenticated.bind(this);
     this.getAccessToken = this.getAccessToken.bind(this);
     this.getProfile = this.getProfile.bind(this);
+    this.grabProfile = this.grabInfo.bind(this);
+
   }
 
   login() {
@@ -36,6 +36,7 @@ export default class Auth {
   handleAuthentication() {
     this.auth0.parseHash((err, authResult) => {
       if (authResult && authResult.accessToken && authResult.idToken) {
+        this.grabProfile=this.grabInfo(authResult);
         this.setSession(authResult);
         history.replace("/home");
       } else if (err) {
@@ -45,8 +46,8 @@ export default class Auth {
       }
     });
   }
-
-
+      grab
+ 
     setSession(authResult) {
         // Set the time that the access token will expire at
         let expiresAt = JSON.stringify(
@@ -55,42 +56,44 @@ export default class Auth {
         //testing:
         console.log("(client side)this is user info:" + JSON.stringify(authResult));
         
-        const userInfo={
-         name: authResult.idTokenPayload.name,
-         email: authResult.idTokenPayload.nickname + "@gmail.com",
-         picture: authResult.idTokenPayload.picture,
         
-        }
-        //testing:
-        console.log(`(client side)this is the user ${userInfo.name} ${userInfo.email} ${userInfo.picture}`)
-
+      
         localStorage.setItem('access_token', authResult.accessToken);
         localStorage.setItem('id_token', authResult.idToken);
         localStorage.setItem('expires_at', expiresAt);
         // navigate to the home route
         history.replace('/home');
         //API user info
-
-
        
-     
-         axios.post('api/home', userInfo)
-          .then(function (response) {
-            //testing:
-            console.log(`user has been found: ${JSON.stringify(response.data)}`);
-           //testing ended
-              // if(JSON.stringify(response.data)==="null"){
-              //   console.log("User is not in database")
-              // }else{
+       // function grabInfo(authResult){
+        
+       const userInfo={
+            name:authResult.idTokenPayload.name,
+            email:authResult.idTokenPayload.nickname + "@gmail.com",
+            picture:authResult.idTokenPayload.picture,
+          }
+       //      return userInfo;
+       //  }      
 
-              // }
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
+        API.createUser({
+          
+            name:authResult.idTokenPayload.name,
+            email:authResult.idTokenPayload.nickname + "@gmail.com",
+            picture:authResult.idTokenPayload.picture,
+           
+           
+        }).then(res => console.log(`user has  been inserted in database`))
+           .catch(err => console.log)
           }
 
-
+          grabInfo(authResult){
+            const userInfo={
+              name:authResult.idTokenPayload.name,
+              email:authResult.idTokenPayload.nickname + "@gmail.com",
+              picture:authResult.idTokenPayload.picture,
+            }
+               return userInfo;
+           }
   getAccessToken() {
     const accessToken = localStorage.getItem("access_token");
     if (!accessToken) {
@@ -128,3 +131,4 @@ export default class Auth {
     }
 
 }
+

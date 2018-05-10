@@ -3,10 +3,13 @@ import axios from "axios";
 
 export default {
 
-
+    //user is created in database
   createUser:function(userinfo){
-    return axios.post("/api/dashboard",userinfo)
+    return axios.post('api/home',userinfo)
   },
+  // createUser:function(userinfo){
+  //   return axios.post("/api/dashboard",userinfo)
+  // },
 
 
   getUserProfile: function(){
@@ -14,6 +17,9 @@ export default {
 
 },
 
+  updateUserProfile:function(){
+  return axios.put('/api/dashboard')
+},
 
 saveResources: function(){
 return axios.put('/api/dashboard')

@@ -12,7 +12,7 @@ class TechPath extends React.Component {
             <h3 className="panel-title">My Technology Path</h3>
           </div>
           <div className="panel-body">
-            <Interests />
+          <Interests auth={this.props.auth}/>
           </div>
         </div>
       </div>

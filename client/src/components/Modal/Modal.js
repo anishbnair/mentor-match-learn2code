@@ -42,7 +42,7 @@ export default class Interests extends React.Component {
             <Modal.Title>Choose your Path</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <Form/>
+          <Form auth={this.props.auth}/>
           </Modal.Body>
           <Modal.Footer>
             <Button onClick={this.handleClose}>Close</Button>
