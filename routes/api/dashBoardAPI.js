@@ -5,7 +5,6 @@ var mongoose=require("mongoose");
 var Users = require("../../models/Users")
 
 //Do we actually need to require resourcesController, mongoose, or Users?
-
 router.route("/").get(usersController.findOne);
 
 module.exports = router;
