@@ -12,11 +12,13 @@ import axios from "axios";
 import API from "../../utils/API";
 import auth from "../Auth/Auth.js";
 
+console.log("authorization email " + auth);
+
 export default class Form extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-    //    email:this.props.auth.grabInfo().email
+      email: this.props.auth.grabInfo().email
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
