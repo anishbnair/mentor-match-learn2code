@@ -7,7 +7,7 @@ import "./Connect.css";
 
 class Connect extends Component {
   state = {
-    mentors: {}
+    mentors: []
   };
 
   componentDidMount() {
@@ -52,11 +52,11 @@ class Connect extends Component {
         <div className="mentor-connect">
           <div className="mentors">
             <ul className="mentor">
-              {Object.keys(this.state.mentors).map(key => (
+              {(this.state.mentors).map((key, index) => (
                 <Mentor
-                  key={key}
-                  index={key}
-                  details={this.state.mentors[key]}
+                  key={key._id}
+                  index={key._id}
+                  details={this.state.mentors[index]}
                 />
               ))}
             </ul>
