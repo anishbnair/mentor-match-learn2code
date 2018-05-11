@@ -10,6 +10,10 @@ import API from "../utils/API";
 import "./DashboardPage.css";
 
 class DashboardPage extends Component {
+  // constructor(){
+  //   this.userEmail=this.userEmail.bind(this);
+  // }
+  
   state = {
     mentees: {}
   };
@@ -18,6 +22,7 @@ class DashboardPage extends Component {
     this.loadMentees();
     this.loadPreferences();
   }
+
 
   loadMentees = () => {
     API.getUserProfile()
@@ -28,11 +33,19 @@ class DashboardPage extends Component {
       })
       .catch(err => console.log("fail"));
   };
-
+  
   loadPreferences = () => {
-console.log("dashboard is email: " + this.props.auth.grabInfo().email )
-    API.getUserPreference(this.props.auth.grabInfo().email).then(res => {
-      console.log("front end preferences has been sent and received!!");
+    console.log("KLKLKLKL")
+     
+    
+    //const email = this.props.auth.grabInfo().email
+      //  email.toString();
+   // console.log(email )
+      const d={
+        email: 'klasode@gmail.com'
+      }
+    API.getUserPreference(d).then(res => {
+      console.log("front end preferences has been sent and received!!Preferences below:");
       console.log(res.data);
     });
   };
