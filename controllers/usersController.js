@@ -36,7 +36,7 @@ module.exports = {
 },
 //findByEmail allows to return user's preferences back to the dasboardpages.jsin my technologies
   findByEmail: function(req, res) {
-   console.log("findByEmail:")
+   console.log("****findByEmail:*****")
     console.log(req.body)
     // res.send("users preferences has been sent to the back! Next step database...")
     // db.Users
@@ -57,7 +57,7 @@ module.exports = {
     console.log("testing from update in userscontroller.js")
     console.log( req.body)
     db.Users
-      .updateMany({"email": req.body.email },{html:true, css:true, javascript:true, jquery:true, mongodb:true, nodejs:true })
+      .updateMany({"email": req.body.email },{html:req.body.css, css:req.body.css, javascript:req.body.javascript, jquery:req.body.jquery, mongodb:req.body.mongodb, nodejs:req.body.nodejs, mentor:req.body.mentor, mentee:req.body.mentee })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

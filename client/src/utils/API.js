@@ -3,7 +3,7 @@ import axios from "axios";
 
 export default {
 
-    //user is created in database
+    //user is first checked in database and will be created if not found in database on initial sign in
   createUser:function(userinfo){
     return axios.post('api/home',userinfo)
   },
@@ -13,11 +13,11 @@ export default {
 
 
   getUserProfile: function(){
-  return axios.get('/api/dashboard')
+  return axios.post('/api/dashboard')
 
-},
-  getUserPreference:function(){
-  return axios.get('/api/home')
+},///retrieves selected technologies
+  getUserPreference:function(e){
+  return axios.post('/api/home')
 },
 
   updateUserProfile:function(updateInfo){

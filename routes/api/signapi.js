@@ -7,7 +7,7 @@ var Users = require("../../models/Users")
 
 
 
-//router.route("/").post(usersController.findOne)
+router.route("/").post(usersController.findOne)
 
 
 module.exports = router;

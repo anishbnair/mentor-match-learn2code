@@ -77,11 +77,11 @@ export default class Form extends React.Component {
 
                 <FormGroup>
                     <Checkbox type="checkbox" onChange={this.handleInputChange} name="html" value="true">HTML</Checkbox>
-                    <Checkbox type="checkbox" onChange={this.handleInputChange}  name="CSS" value="true" >CSS</Checkbox>
-                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="Javascript" value='true' >JavaScript</Checkbox>
-                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="jQuery" value='true'>jQuery</Checkbox>
-                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="MongoDB" value='true' >MongoDB</Checkbox>
-                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="Node.js" value='true' >Node.js</Checkbox>
+                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="css" value="true" >CSS</Checkbox>
+                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="javascript" value='true' >JavaScript</Checkbox>
+                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="jquery" value='true'>jQuery</Checkbox>
+                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="mongodb" value='true' >MongoDB</Checkbox>
+                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="nodejs" value='true' >Node.js</Checkbox>
                     <Checkbox type="checkbox" onChange={this.handleInputChange} name="mentee" value='true' >Are you a mentee?</Checkbox>
                     <Checkbox type="checkbox" onChange={this.handleInputChange} name="mentor" value='true' >Would you like to mentor?</Checkbox>
                 
