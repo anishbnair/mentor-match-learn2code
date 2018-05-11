@@ -27,27 +27,30 @@ export default {
     return axios.put('/api/dashboard', updateInfo)
 },
 
-saveResources: function(){
-return axios.put('/api/dashboard')
-},
+    saveResources: function() {
+        return axios.put('/api/dashboard')
+    },
 
-saveUserConnection: function(){
-return axios.put('/api/developer/')
-},
 
-deleteresource: function(){
-  return axios.put('/api/developer/')
-},
+    deleteresource: function() {
+        return axios.put('/api/developer/')
+    },
 
-showResourceList: function(){
-  return axios.post('/api/resources')
+    showResourceList: function() {
+        return axios.post('/api/resources')
 
-},
+    },
 
-showConnection: function(){
-	console.log("this is showConnection");
-  return axios.get('/api/connect')
-}
+    //these methods are used by the Connect Page
 
+    showConnection: function() {
+        console.log("this is showConnection");
+        return axios.get('/api/connect')
+    },
+
+    saveUserConnection: function(userIndex, mentorIndex) {
+        console.log("this is saveUserConnection");
+        return axios.put('/api/developer/', {userIndex, mentorIndex})
+    }
 
 };

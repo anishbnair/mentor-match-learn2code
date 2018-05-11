@@ -2,6 +2,7 @@ const db = require("../models");
 
 // Defining methods for the UserssController
 module.exports = {
+
   findAll: function(req, res) {
     console.log("******************findAll method****************");
     db.Users
@@ -73,4 +74,17 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   }
+
+    addConnection: function(req, res) {
+        console.log(req.body)
+        db.Users.findOneAndUpdate({
+            _id: req.body.userIndex
+        }, {
+            $push: {
+                mentors: req.body.mentorIndex
+            }
+        });
+    }
+
 };
+
