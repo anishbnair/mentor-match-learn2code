@@ -57,7 +57,7 @@ module.exports = {
     console.log("testing from update in userscontroller.js")
     console.log( req.body)
     db.Users
-      .updateMany({"email": req.body.email },{html:req.body.css, css:req.body.css, javascript:req.body.javascript, jquery:req.body.jquery, mongodb:req.body.mongodb, nodejs:req.body.nodejs, mentor:req.body.mentor, mentee:req.body.mentee })
+      .updateMany({"email": req.body.email },{html:req.body.html, css:req.body.css, javascript:req.body.javascript, jquery:req.body.jquery, mongodb:req.body.mongodb, nodejs:req.body.nodejs, mentor:req.body.mentor, mentee:req.body.mentee })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

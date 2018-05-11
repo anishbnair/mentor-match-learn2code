@@ -7,7 +7,7 @@ const resourcesRoute = require("./resourcesAPI");
 
 router.use("/dashboard", dashBoardRoute);
 router.use("/connect", connectRoute);
-router.use("/home", userRoute);
+router.use("/dashboard", userRoute);
 router.use("/home", signInRoute);
 router.use("/resources", resourcesRoute);
 

@@ -17,7 +17,9 @@ export default {
 
 },///retrieves selected technologies
   getUserPreference:function(e){
-  return axios.post('/api/home')
+    console.log("API.js file:***** expecting: klasode@gmail.com ...Actual:")
+    console.log(e)
+  return axios.post('/api/dashboard')
 },
 
   updateUserProfile:function(updateInfo){
