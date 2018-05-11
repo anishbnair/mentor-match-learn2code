@@ -1,10 +1,9 @@
 import React, { Component } from "react"; 
 
 
-class UserTechList extends Component { 
-    render() {
+const UserTechList = props =>( 
         
-        return (
+    
             <div className="container">
                 <ul className="usertech-list">
                     <li>
@@ -12,9 +11,9 @@ class UserTechList extends Component {
                     </li>
                 </ul>
             </div>
-        );
-   }
-}
+        
+
+)
 
 export default UserTechList; 
 
