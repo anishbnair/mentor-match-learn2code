@@ -76,14 +76,14 @@ export default class Form extends React.Component {
                 />
 
                 <FormGroup>
-                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="html" value="html">HTML</Checkbox>
-                    <Checkbox type="checkbox" onChange={this.handleInputChange}  name="CSS" value="css" >CSS</Checkbox>
-                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="Javascript" value='javascript' >JavaScript</Checkbox>
-                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="jQuery" value='jquery'>jQuery</Checkbox>
-                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="MongoDB" value='mongodb' >MongoDB</Checkbox>
-                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="Node.js" value='nodejs' >Node.js</Checkbox>
-                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="mentee" value='mentee' >Are you a mentee?</Checkbox>
-                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="mentor" value='mentor' >Would you like to mentor?</Checkbox>
+                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="html" value="true">HTML</Checkbox>
+                    <Checkbox type="checkbox" onChange={this.handleInputChange}  name="CSS" value="true" >CSS</Checkbox>
+                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="Javascript" value='true' >JavaScript</Checkbox>
+                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="jQuery" value='true'>jQuery</Checkbox>
+                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="MongoDB" value='true' >MongoDB</Checkbox>
+                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="Node.js" value='true' >Node.js</Checkbox>
+                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="mentee" value='true' >Are you a mentee?</Checkbox>
+                    <Checkbox type="checkbox" onChange={this.handleInputChange} name="mentor" value='true' >Would you like to mentor?</Checkbox>
                 
                 </FormGroup>
 

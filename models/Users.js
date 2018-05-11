@@ -30,31 +30,31 @@ descript:{
   // required:true
 },
 html:{
-  type:Boolean,
-  default:false
+  type:String,
+  default:"false"
 },
 css:{
-  type:Boolean,
-  default:false
+  type:String,
+  default:"false"
 },
 javascript:{
-  type:Boolean,
-  default:false
+  type:String,
+  default:"false"
   
 },
 jquery:{
-  type:Boolean,
-  default:false
+  type:String,
+  default:"false"
   
 },
 mongodb:{
-  type:Boolean,
-  default:false
+  type:String,
+  default:"false"
   
 },
 nodejs:{
-  type:Boolean,
-  default:false
+  type:String,
+  default:"false"
   
 },
 
