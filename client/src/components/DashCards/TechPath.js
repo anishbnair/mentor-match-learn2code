@@ -1,6 +1,7 @@
 import React from "react";
 import "./DashCards.css";
 import Interests from "../Modal/Modal.js";
+import UserTechList from "../UserTechList/UserTechList"
 import API from "../../utils/API";
 
 
@@ -19,7 +20,7 @@ class TechPath extends React.Component {
             
           </div>
           <div className="panel-body">
-          {/* testing*/}
+            <UserTechList />
           
           </div>
         </div>
