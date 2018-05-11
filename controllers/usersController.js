@@ -42,7 +42,7 @@ module.exports = {
     // res.send("users preferences has been sent to the back! Next step database...")
     db.Users
     //   .findById(req.body.id)
-            .findOne({"email":req.body.email})
+            .findOne({"email":/* req.body.email */ "jones.nadia.l@gmail.com"})
     // //   // .findById(req.id)
     .then(dbModel => {
       console.log("retriving preferences...")

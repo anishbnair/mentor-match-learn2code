@@ -42,9 +42,9 @@ class DashboardPage extends Component {
       //  email.toString();
    // console.log(email )
       const d={
-        email: 'klasode@gmail.com'
+        email: 'jones.nadia.l@gmail.com'
       }
-    API.getUserPreference(d).then(res => {
+    API.userPreference(d).then(res => {
       console.log("front end preferences has been sent and received!!Preferences below:");
       console.log(res.data);
     });
