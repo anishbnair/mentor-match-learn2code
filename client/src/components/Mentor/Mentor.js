@@ -1,11 +1,33 @@
 import React, { Component } from "react";
 import { Button } from 'react-bootstrap';
+import API from "../../utils/API.js"
 import "./Mentor.css";
 
 class Mentor extends Component {
+  constructor(props) {
+    super(props);
+    this.handleButton = this.handleButton.bind(this);
+  }
+
 
   handleButton () {
-    alert("Hello World!");
+    //alert("Hello World!");
+    //alert(this.props.index);
+    console.log("this.props.index = " + this.props.index)
+    const index = this.props.index;
+    console.log("index = " + index);
+    const myIndex = index ;
+    API.saveUserConnection(index, myIndex)
+       .then ((res, req) => {
+        console.log("success");
+        console.log("res");
+        console.log(res);
+        console.log("req");
+        console.log(req);
+
+      })
+      .catch(err => console.log("fail"));    
+
   }
 
 
