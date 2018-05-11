@@ -44,7 +44,7 @@ export default class Form extends React.Component {
     //end testing
 
     console.log("this is user info:" + JSON.stringify(this.state));
-
+      console.log("this is what is selected on the from before sending to backend:")
     console.log(this.state);
     API.updateUserProfile(this.state).then(res => {
       console.log("this is response for api updated:");

@@ -11,7 +11,7 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },//findOne method is for signin only
   findOne: function(req, res) {
-   console.log("findone console:" + JSON.stringify(req.body.email))
+   console.log(req.body.email)
      db.Users
          .findOne({"email":req.body.email})
          .sort({ date: -1 })
@@ -39,12 +39,17 @@ module.exports = {
    console.log("****findByEmail:*****")
     console.log(req.body)
     // res.send("users preferences has been sent to the back! Next step database...")
-    // db.Users
-    // //   .findById(req.body.id)
-  //           .findOne({"email":req.body.email})
-  //   // //   // .findById(req.id)
-  //   .then(dbModel => res.json(dbModel))
-  //  .catch(err => res.status(422).json(err));
+    db.Users
+    //   .findById(req.body.id)
+            .findOne({"email":req.body.email})
+    // //   // .findById(req.id)
+    .then(dbModel => {
+      console.log("retriving preferences...")
+      console.log(
+        dbModel
+      )
+      res.json(dbModel)})
+   .catch(err => res.status(422).json(err));
     //   s
   },
   create: function(req, res) {
@@ -54,7 +59,7 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   update: function(req, res) {
-    console.log("testing from update in userscontroller.js")
+    console.log("****testing from update in userscontroller.js")
     console.log( req.body)
     db.Users
       .updateMany({"email": req.body.email },{html:req.body.html, css:req.body.css, javascript:req.body.javascript, jquery:req.body.jquery, mongodb:req.body.mongodb, nodejs:req.body.nodejs, mentor:req.body.mentor, mentee:req.body.mentee })

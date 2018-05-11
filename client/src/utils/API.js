@@ -19,12 +19,12 @@ export default {
   getUserPreference:function(e){
     console.log("API.js file:***** expecting: klasode@gmail.com ...Actual:")
     console.log(e)
-  return axios.post('/api/dashboard')
+  return axios.post('/api/dashboard',e)
 },
 
   updateUserProfile:function(updateInfo){
   console.log("API.js" + JSON.stringify(updateInfo))
-    return axios.put('/api/home', updateInfo)
+    return axios.put('/api/dashboard', updateInfo)
 },
 
 saveResources: function(){

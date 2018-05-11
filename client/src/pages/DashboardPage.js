@@ -19,33 +19,33 @@ class DashboardPage extends Component {
   };
 
   componentDidMount() {
-   // this.loadMentees();
+    this.loadMentees();
     this.loadPreferences();
   }
 
- // const userEmail=this.props.auth.grabInfo().email;
-userEmail = () =>{
-const e="klasode@gmail.com"
-  // const userEmail=this.props.auth.grabInfo().email;
-  // console.log("KLKLKLKL")
-    return e;
-}
-  // loadMentees = () => {
-  //   API.getUserProfile()
-  //     .then(res => {
-  //       console.log("success");
-  //       console.log(res);
-  //       this.setState({ mentees: res.data });
-  //     })
-  //     .catch(err => console.log("fail"));
-  // };
+
+  loadMentees = () => {
+    API.getUserProfile()
+      .then(res => {
+        console.log("success");
+        console.log(res);
+        this.setState({ mentees: res.data });
+      })
+      .catch(err => console.log("fail"));
+  };
   
   loadPreferences = () => {
     console.log("KLKLKLKL")
-    const email = this.props.auth.grabInfo().email
-console.log(email )
-    API.getUserPreference(email).then(res => {
-      console.log("front end preferences has been sent and received!!");
+     
+    
+    //const email = this.props.auth.grabInfo().email
+      //  email.toString();
+   // console.log(email )
+      const d={
+        email: 'klasode@gmail.com'
+      }
+    API.getUserPreference(d).then(res => {
+      console.log("front end preferences has been sent and received!!Preferences below:");
       console.log(res.data);
     });
   };
