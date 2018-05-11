@@ -7,31 +7,43 @@ var Schema = mongoose.Schema;
 
 var ResourcesSchema = new Schema({
  
-HTML: {
-    type: [String],
-    required: true
+  HTML: {
+    type: {
+       type: [String],
+       required: true
+    }
   },
   
 CSS: {
+  type: {
     type: [String],
     required: true
+ }
   },
 
 jQuery:{
-    type:[String],
-    required:true
+  type: {
+    type: [String],
+    required: true
+ }
 },
 mongo: {
-    type:[String],
-    required:true
+  type: {
+    type: [String],
+    required: true
+ }
   },
 express:{
-    type:[String],
-    required:true
+  type: {
+    type: [String],
+    required: true
+ }
   },
 node_js:{
-    type:[String],
-    required:true
+  type: {
+    type: [String],
+    required: true
+ }
   }
     
   });
