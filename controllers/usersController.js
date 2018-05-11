@@ -66,12 +66,15 @@ module.exports = {
             .catch(err => res.status(422).json(err));
     },
     addConnection: function(req, res) {
-        console.log(req.body)
+        console.log("running addConnection");
+        console.log("req.body from inside addConnection");
+        console.log(req.body);        
         db.Users.findOneAndUpdate({
             _id: req.body.userIndex
         }, {
             $push: {
-                mentors: req.body.mentorIndex
+                //mentors: req.body.mentorIndex
+                mentoredUsers: req.body.mentorIndex
             }
         });
     }
