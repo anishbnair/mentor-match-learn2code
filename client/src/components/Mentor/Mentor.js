@@ -17,13 +17,13 @@ class Mentor extends Component {
     const index = this.props.index;
     console.log("index = " + index);
     const myIndex = index ;
-    API.saveUserConnection(index, myIndex)
+    API.saveUserConnection(myIndex, index)
        .then ((res, req) => {
         console.log("success");
-        console.log("res");
-        console.log(res);
-        console.log("req");
-        console.log(req);
+        //console.log("res");
+        //console.log(res);
+        //console.log("req");
+        //console.log(req);
 
       })
       .catch(err => console.log("fail"));    
@@ -43,7 +43,7 @@ class Mentor extends Component {
             <li className="mentor-list">
               <img src={image} alt={name} />
               <h3 className="mentor-name">Name: {name}</h3>
-              <p>email: {email}</p>
+              <p>Email: {email}</p>
               <p>GitHub: {github}</p>
               <p>Skill: {skill}</p>
               <p>About me: {desc}</p>
