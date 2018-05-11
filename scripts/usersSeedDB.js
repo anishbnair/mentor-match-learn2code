@@ -21,8 +21,8 @@ const usersSeed = [
       "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/MarioSMBW.png/220px-MarioSMBW.png",
     desc: "I am a front-end web developer who loves to code.",
     skill: "HTML, CSS, JavaScript",
-    mentoredUsers: "Empty",
-    menteeUsers: "Empty"
+    mentoredUsers: ["Dave", "Martin"],
+    menteeUsers: []
   },
 
   {
@@ -33,8 +33,8 @@ const usersSeed = [
     image: "https://upload.wikimedia.org/wikipedia/en/f/f1/LuigiNSMBW.png",
     desc: "I am a back-end web developer.",
     skill: "Node.js, Express, MongoDB",
-    mentoredUsers: "Empty",
-    menteeUsers: "Empty"
+    mentoredUsers: ["Dave", "Martin"],
+    menteeUsers: []
   },
   {
     name: "Jane Haux",
@@ -45,8 +45,8 @@ const usersSeed = [
       "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/MarioSMBW.png/220px-MarioSMBW.png",
     desc: "Fullstack here and ready to rumble",
     skill: "HTML, CSS, node_js,express_js",
-    mentoredUsers: "Empty",
-    menteeUsers: "Empty"
+    mentoredUsers: ["Dave", "Martin"],
+    menteeUsers: []
   }
 ];
 console.log("users seed inserted");
