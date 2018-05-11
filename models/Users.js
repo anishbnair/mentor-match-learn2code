@@ -62,6 +62,14 @@ skill:{
 type:String,
 //requred:true
 },
+mentor:{
+  type:String,
+  default:"false"
+},
+mentee:{
+  type:String,
+  default:"false"
+},
   userCreated: {
     type: Date,
     default: Date.now

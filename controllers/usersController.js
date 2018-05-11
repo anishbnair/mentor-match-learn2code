@@ -34,15 +34,17 @@ module.exports = {
       
        
 },
-//findByEmail allows to return user's preferences back to the dasboardpages.js
+//findByEmail allows to return user's preferences back to the dasboardpages.jsin my technologies
   findByEmail: function(req, res) {
-    console.log(req)
+   console.log("findByEmail:")
+    console.log(req.body)
     // res.send("users preferences has been sent to the back! Next step database...")
-    // // db.Users
+    // db.Users
     // //   .findById(req.body.id)
-    // //   // .findById(req.id)
-    //   // .then(dbModel => res.json(dbModel))
-    //   // .catch(err => res.status(422).json(err));
+  //           .findOne({"email":req.body.email})
+  //   // //   // .findById(req.id)
+  //   .then(dbModel => res.json(dbModel))
+  //  .catch(err => res.status(422).json(err));
     //   s
   },
   create: function(req, res) {
@@ -55,7 +57,7 @@ module.exports = {
     console.log("testing from update in userscontroller.js")
     console.log( req.body)
     db.Users
-      .findOneAndUpdate({"email": req.body.email },{html:true},{css:true})
+      .updateMany({"email": req.body.email },{html:true, css:true, javascript:true, jquery:true, mongodb:true, nodejs:true })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
