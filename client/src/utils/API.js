@@ -17,10 +17,19 @@ export default {
 
 },///retrieves selected technologies
   getUserPreference:function(e){
-    console.log("API.js file:***** expecting: klasode@gmail.com ...Actual:")
+    console.log("API.js file:***** expecting: jones.nadia.l@gmail.com ...Actual:")
     console.log(e)
   return axios.post('/api/dashboard',e)
 },
+
+  userPreference: function (e) {
+      console.log("API.js file:***** expecting: jones.nadia.l@gmail.com ...Actual:")
+      console.log(e)
+      return axios.get('/api/userPref', e)
+  },
+
+
+
 
   updateUserProfile:function(updateInfo){
   console.log("API.js" + JSON.stringify(updateInfo))
