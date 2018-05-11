@@ -1,15 +1,20 @@
 .mentor-list {
-  border-bottom: 2px solid #000;
-  border-top: 1px solid #000;
+  border: 2px solid #0b3c5d;
+  /* border-top: 1px solid #000; */
   padding-bottom: 2rem;
   padding-top: 2rem;
   margin-bottom: 5px;
   clear: both;
   overflow: hidden;
+  background: #ffffff;
+  color: #000;
+  line-height: 2;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
 }
 .mentor-list p {
   margin: 0;
-  font-size: 1 rem;
+  font-size: 1rem;
 }
 .mentor-list .mentor-name {
   margin: 0;
@@ -28,7 +33,12 @@
   float: left;
   width: 150px;
   height: 150px;
-  margin-right: 1rem;
+  margin-right: 4rem;
+  margin-left: 3rem;
+}
+
+.container {
+  margin-bottom: 1rem;
 }
 
 /* .mentor-connect {
