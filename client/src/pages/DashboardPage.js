@@ -30,7 +30,8 @@ class DashboardPage extends Component {
   };
 
   loadPreferences = () => {
-    API.getUserPreference().then(res => {
+console.log("dashboard is email: " + this.props.auth.grabInfo().email )
+    API.getUserPreference(this.props.auth.grabInfo().email).then(res => {
       console.log("front end preferences has been sent and received!!");
       console.log(res.data);
     });
