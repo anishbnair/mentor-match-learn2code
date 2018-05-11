@@ -30,58 +30,58 @@ descript:{
   // required:true
 },
 html:{
-  type:Boolean,
-  default:false
+  type:String,
+  default:"false"
 },
 css:{
-  type:Boolean,
-  default:false
+  type:String,
+  default:"false"
 },
 javascript:{
-  type:Boolean,
-  default:false
+  type:String,
+  default:"false"
   
 },
 jquery:{
-  type:Boolean,
-  default:false
+  type:String,
+  default:"false"
   
 },
 mongodb:{
-  type:Boolean,
-  default:false
-  
-},
-express:{
-  type:Boolean,
-  default:false
+  type:String,
+  default:"false"
   
 },
 nodejs:{
-  type:Boolean,
-  default:false
+  type:String,
+  default:"false"
   
 },
-react:{
-  type:Boolean,
-  default:false
-},
+
 skill:{
 type:String,
 //requred:true
+},
+mentor:{
+  type:String,
+  default:"false"
+},
+mentee:{
+  type:String,
+  default:"false"
 },
   userCreated: {
     type: Date,
     default: Date.now
   },
   mentoredUsers:{
-    type:Schema.Types.ObjectId,
-    ref:"Users",
+    type:[String],
+    
     // default:"Empty"
   },
   menteeUsers:{
-    type:  Schema.Types.ObjectId,
-    ref:"Users",
+    type: [String],
+    
     // default:"Empty"
   },
 
