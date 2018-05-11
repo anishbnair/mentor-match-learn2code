@@ -3,27 +3,29 @@ import axios from "axios";
 
 export default {
 
-    //user is created in database
-    createUser: function(userinfo) {
-        return axios.post('api/home', userinfo)
-    },
+    //user is first checked in database and will be created if not found in database on initial sign in
+  createUser:function(userinfo){
+    return axios.post('api/home',userinfo)
+  },
+  // createUser:function(userinfo){
+  //   return axios.post("/api/dashboard",userinfo)
+  // },
 
-    // createUser:function(userinfo){
-    //   return axios.post("/api/dashboard",userinfo)
-    // },
 
-    getUserProfile: function() {
-        return axios.get('/api/dashboard')
-    },
+  getUserProfile: function(){
+  return axios.post('/api/dashboard')
 
-    getUserPreference: function() {
-        return axios.get('/api/home')
-    },
+},///retrieves selected technologies
+  getUserPreference:function(e){
+    console.log("API.js file:***** expecting: klasode@gmail.com ...Actual:")
+    console.log(e)
+  return axios.post('/api/dashboard',e)
+},
 
-    updateUserProfile: function(updateInfo) {
-        console.log("API.js" + JSON.stringify(updateInfo))
-        return axios.put('/api/home', updateInfo)
-    },
+  updateUserProfile:function(updateInfo){
+  console.log("API.js" + JSON.stringify(updateInfo))
+    return axios.put('/api/dashboard', updateInfo)
+},
 
     saveResources: function() {
         return axios.put('/api/dashboard')
