@@ -75,8 +75,8 @@ var UserSchema = new Schema({
         default: Date.now
     },
     mentoredUsers: {
-        type: [String],
-        default: ["Alice", "Bob"]
+        type: [Schema.Types.ObjectId],
+        default: []
 
         // default:"Empty"
     },
