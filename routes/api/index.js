@@ -8,8 +8,10 @@ const resourcesRoute = require("./resourcesAPI");
 router.use("/connect", connectRoute);
 router.use("/dashboard", dashboardRoute);
 router.use("/developer", devConnectRoute);
-router.use("/home", userRoute);
+// router.use("/home", userRoute);
 router.use("/home", signInRoute);
 router.use("/resources", resourcesRoute);
 
 module.exports = router;
+
+
