@@ -10,62 +10,68 @@ import API from "../utils/API";
 import "./DashboardPage.css";
 
 class DashboardPage extends Component {
-  // constructor(){
-  //   this.userEmail=this.userEmail.bind(this);
-  // }
-  
-  state = {
-    mentees: {}
-  };
 
-  componentDidMount() {
-    this.loadMentees();
-    this.loadPreferences();
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+           profile: {} 
+        };
   }
 
-
-  loadMentees = () => {
-    API.getUserProfile()
-      .then(res => {
-        console.log("success");
-        console.log(res);
-        this.setState({ mentees: res.data });
-      })
-      .catch(err => console.log("fail"));
-  };
-  
-  loadPreferences = () => {
-    console.log("KLKLKLKL")
-     
-    
-    //const email = this.props.auth.grabInfo().email
-      //  email.toString();
-   // console.log(email )
-      const d={
-        email: 'jones.nadia.l@gmail.com'
-      }
-    API.userPreference(d).then(res => {
-      console.log("front end preferences has been sent and received!!Preferences below:");
-      console.log(res.data);
-    });
-  };
-
   componentWillMount() {
-    this.setState({ profile: {} });
+    this.addRow();
+  }
+
+  addRow() {
+
     const { userProfile, getProfile } = this.props.auth;
+
     console.log("props.auth: ", this.props.auth);
+
     if (!userProfile) {
       getProfile((err, profile) => {
         this.setState({ profile });
+
+        console.log("** dashboard is email: ", this.state.profile.nickname);
+
+        const name=this.state.profile.name;
+
+        var n = name.search("@");
+        if (n === 0){
+          const nickname=this.state.profile.nickname+"@gmail.com"
+          console.log(name);
+        } else {
+          const nickname=this.state.profile.name
+          console.log(name);
+        }
+
       });
     } else {
       this.setState({ profile: userProfile });
+
+      console.log("* dashboard is email: ");
+
+      const name=this.props.auth.userProfile.name;
+      
+      var n = name.search("@");
+      if (n === 0){
+        const nickname=this.props.auth.userProfile.nickname+"@gmail.com"
+        console.log(name);
+      } else {
+        const nickname=this.props.auth.userProfile.name
+        console.log(name);
+      }
+      
     }
   }
 
+
   render() {
     const { profile } = this.state;
-    console.log("contents of profile: ", profile);
+    console.log("render: ", profile);
+
     return (
       <div className="dash">
         {/* <Nav title="Mentor Match" /> */}
