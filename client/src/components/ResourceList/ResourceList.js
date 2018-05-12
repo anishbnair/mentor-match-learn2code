@@ -13,6 +13,7 @@ class ResourceList extends Component {
               <a href={url} target="_blank" key={i}>
                 {url}
                 <br />
+                <br/>
               </a>
             ))}
           </li>

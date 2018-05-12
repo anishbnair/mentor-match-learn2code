@@ -10,5 +10,11 @@
     color: black;
 }
 
+.myResourcesList, .usertech-list {
+    line-height: 2;
+}
 
+.MyConnectionsList {
+    line-height: 1.5;
+}
 
