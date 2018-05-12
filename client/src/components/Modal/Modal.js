@@ -33,7 +33,7 @@ export default class Interests extends React.Component {
 
     return (
       <div>
-        <Button className="tech-btn pull-right" bsStyle="primary" bsSize="medium" onClick={this.handleShow}>
+        <Button className="tech-btn pull-right" bsSize="medium" onClick={this.handleShow}>
           Choose your Path
         </Button>
 
