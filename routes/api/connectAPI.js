@@ -10,4 +10,5 @@ var Users = require("../../models/Users")
 //router.get(usersController.findAll);
 router.route("/").get(usersController.findAll);
 
+
 module.exports = router;

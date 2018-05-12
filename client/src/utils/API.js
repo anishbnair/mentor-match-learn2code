@@ -1,56 +1,59 @@
 import axios from "axios";
 
-
 export default {
-
-    //user is first checked in database and will be created if not found in database on initial sign in
-  createUser:function(userinfo){
-    return axios.post('api/home',userinfo)
+  //user is first checked in database and will be created if not found in database on initial sign in
+  createUser: function(userinfo) {
+    return axios.post("api/home", userinfo);
   },
   // createUser:function(userinfo){
   //   return axios.post("/api/dashboard",userinfo)
   // },
 
+  getUserProfile: function() {
+    return axios.post("/api/dashboard");
+  }, ///retrieves selected technologies
+  getUserPreference: function(e) {
+    console.log(
+      "API.js file:***** expecting: jones.nadia.l@gmail.com ...Actual:"
+    );
+    console.log(e);
+    return axios.post("/api/dashboard", e);
+  },
 
-  getUserProfile: function(){
-  return axios.post('/api/dashboard')
+  userPreference: function(e) {
+    console.log(
+      "API.js file:***** expecting: jones.nadia.l@gmail.com ...Actual:"
+    );
+    console.log(e);
+    return axios.get("/api/userPref", e);
+  },
 
-},///retrieves selected technologies
-  getUserPreference:function(e){
-    console.log("API.js file:***** expecting: klasode@gmail.com ...Actual:")
-    console.log(e)
-  return axios.post('/api/dashboard',e)
-},
+  updateUserProfile: function(updateInfo) {
+    console.log("API.js" + JSON.stringify(updateInfo));
+    return axios.put("/api/dashboard", updateInfo);
+  },
 
-  updateUserProfile:function(updateInfo){
-  console.log("API.js" + JSON.stringify(updateInfo))
-    return axios.put('/api/dashboard', updateInfo)
-},
+  saveResources: function() {
+    return axios.put("/api/dashboard");
+  },
 
-    saveResources: function() {
-        return axios.put('/api/dashboard')
-    },
+  deleteresource: function() {
+    return axios.put("/api/developer/");
+  },
 
+  showResourceList: function() {
+    return axios.get("/api/resources");
+  },
 
-    deleteresource: function() {
-        return axios.put('/api/developer/')
-    },
+  //these methods are used by the Connect Page
 
-    showResourceList: function() {
-        return axios.post('/api/resources')
+  showConnection: function() {
+    console.log("this is showConnection");
+    return axios.get("/api/connect");
+  },
 
-    },
-
-    //these methods are used by the Connect Page
-
-    showConnection: function() {
-        console.log("this is showConnection");
-        return axios.get('/api/connect')
-    },
-
-    saveUserConnection: function(userIndex, mentorIndex) {
-        console.log("this is saveUserConnection");
-        return axios.put('/api/developer/', {userIndex, mentorIndex})
-    }
-
+  saveUserConnection: function(userIndex, mentorIndex) {
+    console.log("this is saveUserConnection");
+    return axios.put("/api/developer/", { userIndex, mentorIndex });
+  }
 };

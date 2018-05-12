@@ -1,32 +1,32 @@
 [
     {
         "id": 1,
-        "name": "HTML logo",
+        "name": "HTML",
         "image": "https://static.wixstatic.com/media/8af6f2_bc7045d1b47648f6ae06d3ac0336d108~mv2.png/v1/fill/w_163,h_155,al_c,usm_0.66_1.00_0.01/8af6f2_bc7045d1b47648f6ae06d3ac0336d108~mv2.png"
     },  
     {
         "id": 2, 
-        "name": "CSS logo",
+        "name": "CSS",
         "image": "https://static.wixstatic.com/media/8af6f2_106b3bee5e9e4195a024099a8f8655a2~mv2.png/v1/fill/w_155,h_155,al_c,usm_0.66_1.00_0.01/8af6f2_106b3bee5e9e4195a024099a8f8655a2~mv2.png"
     },
     {
         "id": 3, 
-        "name": "JavaScript logo",
+        "name": "JavaScript",
         "image": "https://static.wixstatic.com/media/8af6f2_691ef5333f4d4279ac23e8328e6a0616~mv2.png/v1/fill/w_115,h_155,al_c,usm_0.66_1.00_0.01/8af6f2_691ef5333f4d4279ac23e8328e6a0616~mv2.png"
     },
     {
         "id": 4, 
-        "name": "jQuery logo",
+        "name": "jQuery",
         "image": "https://static.wixstatic.com/media/8af6f2_c56d2d943d9449c7b572db4d628f672f~mv2.png/v1/fill/w_165,h_155,al_c,usm_0.66_1.00_0.01/8af6f2_c56d2d943d9449c7b572db4d628f672f~mv2.png"
     }, 
     {
         "id": 5, 
-        "name": "Node.js logo",
+        "name": "Node_js",
         "image": "https://static.wixstatic.com/media/8af6f2_c251392cf9a748cda9f489bea38af685~mv2.png/v1/fill/w_135,h_155,al_c,usm_0.66_1.00_0.01/8af6f2_c251392cf9a748cda9f489bea38af685~mv2.png"
     }, 
     {
         "id": 6, 
-        "name": "mongoDB logo",
+        "name": "mongo",
         "image": "https://static.wixstatic.com/media/8af6f2_05fbb125594e450da2919415923b0f95~mv2.png/v1/fill/w_155,h_165,al_c,usm_0.66_1.00_0.01/8af6f2_05fbb125594e450da2919415923b0f95~mv2.png"
     }
 ]

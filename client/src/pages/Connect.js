@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Mentor from "../components/Mentor/Mentor.js";
+import Container from "../components/Container";
 import sampleMentors from "../components/Mentor/seeds-mentor.js";
 import Footer from "../components/Footer";
 import API from "../utils/API.js"
@@ -48,20 +49,21 @@ class Connect extends Component {
             <img src={profile.picture} alt="" />
           </div>
         </div>
-
-        <div className="mentor-connect">
-          <div className="mentors">
-            <ul className="mentor">
-              {(this.state.mentors).map((key, index) => (
-                <Mentor
-                  key={key._id}
-                  index={key._id}
-                  details={this.state.mentors[index]}
-                />
-              ))}
-            </ul>
+        <Container>
+          <div className="mentor-connect">
+            <div className="mentors">
+              <ul className="mentor">
+                {(this.state.mentors).map((key, index) => (
+                  <Mentor
+                    key={key._id}
+                    index={key._id}
+                    details={this.state.mentors[index]}
+                  />
+                ))}
+              </ul>
+            </div>
           </div>
-        </div>
+        </Container>
 
         <Footer />
       </div>

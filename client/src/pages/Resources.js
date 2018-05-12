@@ -7,24 +7,6 @@ import techlogo from "../tech_image.json";
 import API from "../utils/API";
 
 class Resources extends Component {
-  state = {
-    resources: {}
-  };
-
-  componentDidMount() {
-    this.loadResources();
-  }
-
-  loadResources = () => {
-    API.showResourceList()
-      .then(res => {
-        console.log("success");
-        console.log(res);
-        this.setState({ resources: res.data });
-      })
-      .catch(err => console.log("fail"));
-  };
-
   componentWillMount() {
     this.setState({ profile: {} });
     const { userProfile, getProfile } = this.props.auth;
@@ -52,7 +34,7 @@ class Resources extends Component {
         <Container>
           <div className="logo-cards">
             {techlogo.map(logo => (
-              <ResourceCard key={logo.id} image={logo.image} />
+              <ResourceCard key={logo.id} image={logo.image} name={logo.name} />
             ))}
           </div>
         </Container>
