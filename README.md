@@ -24,6 +24,9 @@ https://mentor-match-learn2code.herokuapp.com
 * `Express`
 * `JavaScript`
 * `Bootstrap`
+* `react-bootstrap`
+* `axios`
+* `body-parser`
 * `CSS`
 * `HTML`
 
