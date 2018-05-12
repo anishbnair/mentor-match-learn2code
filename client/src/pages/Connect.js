@@ -12,6 +12,7 @@ class Connect extends Component {
   };
 
   componentDidMount() {
+    console.log("props.auth: ", this.props.auth);
     this.loadMentors();
   }
 

@@ -11,10 +11,19 @@ class Mentor extends Component {
 
 
   handleButton () {
-    console.log("this.props.index = " + this.props.index)
+    //console.log("this.props.index = " + this.props.index)
+    //console.log("index = " + index);
+    //const index = this.props.index;
+
+    console.log("this.props.details.name = ");
+    console.log(this.props.details.name);   
+
     const index = this.props.index;
-    console.log("index = " + index);
     const myIndex = index ;
+
+    alert("User " + this.props.details.name + " has been added to your connections." + 
+      "\n" + "Check your dashboard to see all your connections!");
+
     API.saveUserConnection(myIndex, index)
        .then ((res, req) => {
         console.log("success");
