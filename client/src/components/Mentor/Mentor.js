@@ -11,8 +11,6 @@ class Mentor extends Component {
 
 
   handleButton () {
-    //alert("Hello World!");
-    //alert(this.props.index);
     console.log("this.props.index = " + this.props.index)
     const index = this.props.index;
     console.log("index = " + index);
@@ -20,13 +18,21 @@ class Mentor extends Component {
     API.saveUserConnection(myIndex, index)
        .then ((res, req) => {
         console.log("success");
+        console.log("res");
+        console.log(res);
+        console.log("req");
+        console.log(req);
+
+      })
+      .catch(err => {
+        console.log("saveUserConnection failed");
         //console.log("res");
         //console.log(res);
         //console.log("req");
         //console.log(req);
-
-      })
-      .catch(err => console.log("fail"));    
+        console.log("err returned is:");
+        console.log(err.response.data);
+      });    
 
   }
 
