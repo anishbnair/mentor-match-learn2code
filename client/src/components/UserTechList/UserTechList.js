@@ -6,9 +6,10 @@ const UserTechList = props =>(
     
             <div className="container">
                 <ul className="usertech-list">
-                    <li>
-                        Grab user selections from db place here
-                    </li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>MongoDB</li>
                 </ul>
             </div>
         
