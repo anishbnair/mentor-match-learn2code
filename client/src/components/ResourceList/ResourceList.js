@@ -1,20 +1,25 @@
-import React, { Component } from "react"; 
+import React, { Component } from "react";
 
+class ResourceList extends Component {
+  render() {
+    const urls = this.props.list;
+    console.log("list:", urls);
 
-class ResourceList extends Component { 
-    render() {
-        const url = this.props.list;
-        
-        return (
-            <div className="container">
-                <ul className="res-list">
-                    <li>
-                        <a href={url} target="_blank"></a>
-                    </li>
-                </ul>
-            </div>
-        );
-   }
+    return (
+      <div className="container">
+        <ul className="res-list">
+          <li>
+            {urls.map((url, i) => (
+              <a href={url} target="_blank" key={i}>
+                {url}
+                <br />
+              </a>
+            ))}
+          </li>
+        </ul>
+      </div>
+    );
+  }
 }
 
-export default ResourceList; 
+export default ResourceList;
