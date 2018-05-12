@@ -11,8 +11,8 @@ https://mentor-match-learn2code.herokuapp.com
 * [Daniela Jaros](https://github.com/jaro0024)
 * [Gene Cannella](https://github.com/GeneCannella)
 * [Kavodel Lasode](https://github.com/KaLaUnlimited)
-* [Nadia Abby](https://github.com/Nadia27)
 * [Matthew Thompson](https://github.com/mvt3641)
+* [Nadia Abby](https://github.com/Nadia27)
 
 ## Technologies Used:
 
